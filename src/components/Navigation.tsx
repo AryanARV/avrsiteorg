@@ -30,33 +30,18 @@ const Navigation = () => {
             <img src={avrLogo} alt="Aravindh Ravichandran" className="h-10 w-auto" />
           </Link>
           
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {menuItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? "text-primary" : "text-foreground/70"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Navigation */}
+          {/* Universal Navigation Menu */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="md:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors">
+            <DropdownMenuTrigger className="p-2.5 rounded-lg hover:bg-secondary/50 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/20">
               <Menu className="h-5 w-5 text-primary" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-48 bg-background/95 backdrop-blur-lg border-border">
+            <DropdownMenuContent align="end" className="w-56 bg-background/98 backdrop-blur-xl border-border shadow-lg">
               {menuItems.map((item) => (
                 <DropdownMenuItem key={item.path} asChild>
                   <Link
                     to={item.path}
-                    className={`w-full cursor-pointer hover:text-primary ${
-                      isActive(item.path) ? "text-primary font-medium" : "text-foreground/70"
+                    className={`w-full cursor-pointer transition-colors py-2.5 ${
+                      isActive(item.path) ? "text-primary font-semibold" : "text-foreground/70 hover:text-primary"
                     }`}
                   >
                     {item.label}
