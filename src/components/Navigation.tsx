@@ -15,10 +15,16 @@ const Navigation = () => {
   
   const menuItems = [
     { label: "Home", path: "/" },
+    { label: "About", path: "/about" },
+    { label: "Host", path: "/host" },
     { label: "Podcasts", path: "/podcasts" },
     { label: "Venture", path: "/venture" },
     { label: "Happenings", path: "/happenings" },
-    { label: "About", path: "/about" },
+    { label: "Hire Me for Events", path: "/hire-me-for-events" },
+    { label: "Archery", path: "/archery" },
+    { label: "Books", path: "/books" },
+    { label: "Chronicles of Echelon", path: "/chronicles-of-echelon" },
+    { label: "Sponsorship", path: "/sponsorship" },
     { label: "Contact", path: "/contact" },
   ];
   

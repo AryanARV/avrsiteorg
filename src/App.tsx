@@ -13,6 +13,10 @@ import Podcasts from "./pages/Podcasts";
 import Venture from "./pages/Venture";
 import Happenings from "./pages/Happenings";
 import About from "./pages/About";
+import Events from "./pages/Events";
+import Archery from "./pages/Archery";
+import Books from "./pages/Books";
+import ChroniclesOfEchelon from "./pages/ChroniclesOfEchelon";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +38,10 @@ const App = () => (
           <Route path="/venture" element={<Venture />} />
           <Route path="/happenings" element={<Happenings />} />
           <Route path="/about" element={<About />} />
+          <Route path="/hire-me-for-events" element={<Events />} />
+          <Route path="/archery" element={<Archery />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/chronicles-of-echelon" element={<ChroniclesOfEchelon />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

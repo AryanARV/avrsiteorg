@@ -209,6 +209,38 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Book Me for Your Event */}
+        <section className="py-20 md:py-32 bg-[#fdf4ee]">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-[#55185d] mb-6">
+                Book Aravindh Ravichandran for Your Event
+              </h2>
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                Inspirational startup mentor, podcast host, and SaaS entrepreneur. Available for keynote talks, panel moderation, fireside chats, and growth workshops.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 my-12 text-left">
+                <div className="space-y-2">
+                  <div className="text-[#55185d] font-semibold">✓ Keynotes on startup growth, SaaS scaling, and content virality</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-[#55185d] font-semibold">✓ Podcast-style storytelling for events</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-[#55185d] font-semibold">✓ Workshops for founders, teams, and creators</div>
+                </div>
+              </div>
+              <Button 
+                size="lg" 
+                className="bg-[#55185d] text-white hover:bg-[#55185d]/90 hover:scale-105 transition-all duration-300 px-8 py-6 text-base"
+                onClick={() => window.location.href = '/hire-me-for-events'}
+              >
+                View Full Profile & Book an Event
+              </Button>
+            </div>
+          </div>
+        </section>
+
         {/* Happenings Preview */}
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-6">

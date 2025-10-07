@@ -45,6 +45,10 @@ All colors MUST be HSL.
     --shadow-card: 0 4px 20px hsl(295 59% 23% / 0.08);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    /* Custom page colors */
+    --events-bg: 30 60% 99%;
+    --events-heading: 295 59% 23%;
   }
 
   .dark {
