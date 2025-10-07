@@ -20,22 +20,47 @@ const Home = () => {
         {/* Hero Section */}
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-6">
-            <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight">
-                Hire Aravindh Ravichandran — Startup Advisory Calls
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Serial entrepreneur, startup mentor, SaaS founder, podcast host, and social impact creator. 
-                Trusted by founders and innovators for actionable insights and rapid growth.
-              </p>
-              <div className="pt-4">
-                <Button 
-                  size="lg" 
-                  className="text-base px-8 py-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-                  onClick={() => window.location.href = '/contact'}
-                >
-                  Book a Startup Advisory Call
-                </Button>
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+              {/* Left: Content */}
+              <div className="space-y-8 animate-fade-in">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                  Build, Scale, Win—With Aravindh Ravichandran
+                </h1>
+                <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+                  Serial entrepreneur, global advisor, SaaS founder, and podcast host.
+                  I help ambitious founders launch, grow, and transform ventures with clarity, speed, and smart execution.
+                </p>
+                <div className="pt-4">
+                  <Button 
+                    size="lg" 
+                    className="text-base px-8 py-6 bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse-subtle"
+                    onClick={() => window.location.href = '/contact'}
+                  >
+                    Book Your Startup Advisory Call
+                  </Button>
+                </div>
+                {/* Social Proof */}
+                <div className="flex flex-wrap gap-4 text-sm text-foreground/70 pt-4">
+                  <span>✓ Trusted by 200+ founders</span>
+                  <span>✓ Featured on 10+ podcasts</span>
+                  <span>✓ CEO of Rook</span>
+                </div>
+              </div>
+
+              {/* Right: Portrait with VFX */}
+              <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="relative group">
+                  {/* VFX Background Glow */}
+                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow group-hover:scale-110 transition-transform duration-500"></div>
+                  {/* Placeholder for portrait - user will paste their image */}
+                  <div className="relative bg-card border-2 border-primary/30 rounded-2xl p-8 text-center space-y-4 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wider">Portrait Image</p>
+                    <p className="text-foreground/70 text-sm">
+                      Paste/upload your high-res portrait here. 
+                      VFX background will automatically apply soft glow and animated particles in primary color.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

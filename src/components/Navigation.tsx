@@ -6,7 +6,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import logoWhite from "@/assets/sports29-logo.png";
+import avrLogo from "@/assets/AVR_Black.png";
 
 const Navigation = () => {
   const location = useLocation();
@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           <Link to="/" className="transition-all duration-300 hover:opacity-80">
-            <span className="text-2xl font-semibold text-primary tracking-tight">Aravindh Ravichandran</span>
+            <img src={avrLogo} alt="Aravindh Ravichandran" className="h-10 w-auto" />
           </Link>
           
           {/* Desktop Navigation */}

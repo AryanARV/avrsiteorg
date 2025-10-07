@@ -1,0 +1,355 @@
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Podcast, Newspaper, Calendar, Heart, Rocket, Award } from "lucide-react";
+
+const Happenings = () => {
+  return (
+    <div className="min-h-screen flex flex-col bg-background">
+      <SEO 
+        title="Happenings - News, Podcasts, Events & Impact | Aravindh Ravichandran"
+        description="Stay updated with Aravindh Ravichandran's latest podcast releases, media features, speaking events, and social impact initiatives."
+        keywords="Aravindh Ravichandran news, podcast episodes, speaking events, social impact, Aravindh Initiative"
+        canonicalUrl="https://sports29.lovable.app/happenings"
+      />
+      <Navigation />
+      
+      <main className="flex-1 pt-24">
+        {/* Page Header */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-primary text-center mb-6 animate-fade-in">
+              Happenings
+            </h1>
+            <p className="text-lg md:text-xl text-foreground/70 text-center max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              Latest updates from podcasts, media, events, and impact initiatives
+            </p>
+          </div>
+        </section>
+
+        {/* Latest Podcast Releases */}
+        <section className="py-16 md:py-24 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <Podcast className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                  Latest Podcast Releases
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8 mb-12">
+                {[
+                  {
+                    show: "Sports29 by AVR",
+                    episode: "Episode 14: Championship Mindset",
+                    description: "Exploring the mental game of elite athletes",
+                    date: "Jan 2025"
+                  },
+                  {
+                    show: "Startup Stories: Realm by Rook",
+                    episode: "Episode 12: Scaling SaaS",
+                    description: "How to grow your SaaS from 0 to 100K users",
+                    date: "Jan 2025"
+                  },
+                  {
+                    show: "AVR x Amrish",
+                    episode: "Episode 8: Global Markets",
+                    description: "Navigating international expansion strategies",
+                    date: "Dec 2024"
+                  }
+                ].map((podcast, index) => (
+                  <Card 
+                    key={index}
+                    className="hover:scale-105 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  >
+                    <CardContent className="p-8 space-y-3">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-wider">{podcast.show}</p>
+                      <h3 className="text-xl font-bold text-foreground">{podcast.episode}</h3>
+                      <p className="text-muted-foreground">{podcast.description}</p>
+                      <p className="text-sm text-foreground/60">{podcast.date}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <Button 
+                  variant="outline"
+                  size="lg"
+                  className="hover:bg-primary hover:text-primary-foreground transition-colors border-2 border-primary"
+                  onClick={() => window.location.href = '/podcasts'}
+                >
+                  See All Podcasts
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Featured Media & Press */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <Newspaper className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                  Featured Media & Press Mentions
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                {[
+                  {
+                    outlet: "TechCrunch",
+                    headline: "Rising SaaS Founders to Watch",
+                    date: "Dec 2024"
+                  },
+                  {
+                    outlet: "Inc42",
+                    headline: "Podcast Revolution in Startup Ecosystem",
+                    date: "Nov 2024"
+                  },
+                  {
+                    outlet: "Forbes India",
+                    headline: "Social Impact Meets Entrepreneurship",
+                    date: "Oct 2024"
+                  },
+                  {
+                    outlet: "YourStory",
+                    headline: "The Future of Vertical SaaS",
+                    date: "Sep 2024"
+                  },
+                  {
+                    outlet: "Economic Times",
+                    headline: "New Wave of Startup Mentors",
+                    date: "Aug 2024"
+                  },
+                  {
+                    outlet: "Business Insider",
+                    headline: "Archery Athlete Turned Tech CEO",
+                    date: "Jul 2024"
+                  }
+                ].map((press, index) => (
+                  <Card 
+                    key={index}
+                    className="hover:scale-105 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  >
+                    <CardContent className="p-6 space-y-2">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-wider">{press.outlet}</p>
+                      <h3 className="text-base font-bold text-foreground">{press.headline}</h3>
+                      <p className="text-sm text-muted-foreground">{press.date}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              {/* FiNext Award */}
+              <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 hover:shadow-2xl transition-all duration-300 max-w-3xl mx-auto">
+                <CardContent className="p-8 text-center space-y-4">
+                  <Award className="h-16 w-16 text-primary mx-auto" />
+                  <h3 className="text-2xl font-bold text-primary">FiNext Award Dubai</h3>
+                  <p className="text-lg font-semibold text-foreground">Innovation in Technology and SaaS</p>
+                  <p className="text-muted-foreground">
+                    "AVR was honored with the FiNext Award in Dubai for innovation in technology and SaaS. 
+                    A proud moment that reflects our dedication to building tools that matter."
+                  </p>
+                  <Button 
+                    variant="outline"
+                    className="border-2 border-primary hover:bg-primary hover:text-primary-foreground"
+                    onClick={() => window.open('https://finext.co', '_blank')}
+                  >
+                    Learn More
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Upcoming Events & Speaking */}
+        <section className="py-16 md:py-24 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <Calendar className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                  Upcoming Events & Speaking
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
+                  {
+                    type: "Webinar",
+                    title: "Scaling Your First SaaS Product",
+                    venue: "Online",
+                    date: "Feb 15, 2025"
+                  },
+                  {
+                    type: "Conference",
+                    title: "Startup Summit 2025",
+                    venue: "Bangalore, India",
+                    date: "Mar 22, 2025"
+                  },
+                  {
+                    type: "Podcast Interview",
+                    title: "Guest on The Founder's Journey",
+                    venue: "Online Recording",
+                    date: "Feb 28, 2025"
+                  },
+                  {
+                    type: "Workshop",
+                    title: "Building Global Startups from India",
+                    venue: "Mumbai, India",
+                    date: "Apr 10, 2025"
+                  }
+                ].map((event, index) => (
+                  <Card 
+                    key={index}
+                    className="hover:scale-105 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  >
+                    <CardContent className="p-8 space-y-3">
+                      <p className="text-xs font-semibold text-primary uppercase tracking-wider">{event.type}</p>
+                      <h3 className="text-xl font-bold text-foreground">{event.title}</h3>
+                      <p className="text-muted-foreground">{event.venue}</p>
+                      <p className="text-sm font-semibold text-foreground/80">{event.date}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Social Impact */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <Heart className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                  Social Impact: Aravindh Initiative
+                </h2>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                {[
+                  {
+                    title: "Blood Drive Campaign 2025",
+                    description: "Organized community blood donation drives across 5 cities, collecting 500+ units to support local hospitals and emergency services.",
+                    impact: "500+ lives potentially saved",
+                    date: "Jan 2025"
+                  },
+                  {
+                    title: "Startup Mentorship Program",
+                    description: "Free 1-on-1 mentorship for underrepresented founders, providing guidance on fundraising, product development, and growth strategies.",
+                    impact: "50+ founders mentored",
+                    date: "Ongoing"
+                  },
+                  {
+                    title: "Education Initiative",
+                    description: "Providing free entrepreneurship workshops and resources to students in tier-2 and tier-3 cities across India.",
+                    impact: "1000+ students reached",
+                    date: "Dec 2024"
+                  },
+                  {
+                    title: "Community Tech Support",
+                    description: "Building open-source tools and resources for small businesses to adopt technology and automation without high costs.",
+                    impact: "200+ businesses supported",
+                    date: "Ongoing"
+                  }
+                ].map((initiative, index) => (
+                  <Card 
+                    key={index}
+                    className="hover:scale-105 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  >
+                    <CardContent className="p-8 space-y-4">
+                      <h3 className="text-xl font-bold text-primary">{initiative.title}</h3>
+                      <p className="text-foreground/80">{initiative.description}</p>
+                      <div className="flex justify-between items-center pt-4 border-t border-border/30">
+                        <p className="text-sm font-semibold text-primary">{initiative.impact}</p>
+                        <p className="text-sm text-muted-foreground">{initiative.date}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Product Updates */}
+        <section className="py-16 md:py-24 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-12">
+                <Rocket className="h-8 w-8 text-primary" />
+                <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                  Product Updates & Launches
+                </h2>
+              </div>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    product: "Rook Platform",
+                    update: "AI-Powered Automation Suite Launch",
+                    description: "Introducing intelligent workflow automation that learns from your business processes and optimizes them automatically.",
+                    date: "Jan 2025"
+                  },
+                  {
+                    product: "Realm by Rook",
+                    update: "Legal Vertical Expansion",
+                    description: "New features specifically designed for law firms and legal departments, including case management and client communication tools.",
+                    date: "Dec 2024"
+                  },
+                  {
+                    product: "Rook Platform",
+                    update: "Enterprise Security Update",
+                    description: "Enhanced security protocols, SOC 2 compliance, and advanced data encryption for enterprise clients.",
+                    date: "Nov 2024"
+                  }
+                ].map((update, index) => (
+                  <Card 
+                    key={index}
+                    className="hover:scale-102 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  >
+                    <CardContent className="p-8">
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div className="space-y-2 flex-1">
+                          <p className="text-xs font-semibold text-primary uppercase tracking-wider">{update.product}</p>
+                          <h3 className="text-xl font-bold text-foreground">{update.update}</h3>
+                          <p className="text-muted-foreground">{update.description}</p>
+                        </div>
+                        <div className="text-sm text-foreground/60 md:text-right">
+                          {update.date}
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+
+              <div className="text-center mt-12">
+                <Button 
+                  size="lg"
+                  className="px-8 py-6 text-base hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                  onClick={() => window.location.href = '/venture'}
+                >
+                  Explore Our Ventures
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      
+      <Footer />
+    </div>
+  );
+};
+
+export default Happenings;

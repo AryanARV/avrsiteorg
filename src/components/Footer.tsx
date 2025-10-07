@@ -1,4 +1,4 @@
-import logoWhite from "@/assets/logo-white.png";
+import logoBlack from "@/assets/logo-black_1.png";
 
 const Footer = () => {
   return (
@@ -11,7 +11,7 @@ const Footer = () => {
           <span>Powered by</span>
           <a href="https://realmrook.com" target="_blank" rel="noopener noreferrer">
             <img 
-              src={logoWhite} 
+              src={logoBlack} 
               alt="Realm by Rook" 
               className="h-8 w-auto opacity-70 hover:opacity-100 transition-opacity duration-300"
             />
