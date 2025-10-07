@@ -41,10 +41,33 @@ const About = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="About Aravindh Ravichandran - Entrepreneur, Advisor & Podcast Host"
-        description="Learn about Aravindh Ravichandran's journey as a serial entrepreneur, startup advisor, SaaS founder, podcast host, and social impact creator."
-        keywords="Aravindh Ravichandran, about, entrepreneur, startup advisor, SaaS founder, podcast host"
-        canonicalUrl="https://sports29.lovable.app/about"
+        title="About Aravindh Ravichandran: Entrepreneur, Advisor & Podcast Host | AVR"
+        description="Meet Aravindh Ravichandran (AVR): Serial entrepreneur, startup advisor, SaaS founder behind Rook & Realm by Rook. Host of Startup Stories, Sports29 podcasts."
+        keywords="Aravindh Ravichandran, AVR, entrepreneur, startup advisor, SaaS founder, podcast host, Rook, Realm by Rook"
+        canonicalUrl="https://aravindh.org/about"
+        type="profile"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Aravindh Ravichandran",
+          "alternateName": "AVR",
+          "description": "Serial Entrepreneur, Startup Advisor, SaaS Founder, Podcast Host",
+          "url": "https://aravindh.org",
+          "image": "https://aravindh.org/assets/AVR_speaking.png",
+          "sameAs": [
+            "https://instagram.com/arav.vr",
+            "https://x.com/AravAVR",
+            "https://youtube.com/@ardh",
+            "https://linkedin.com/in/avra",
+            "https://threads.com/arav.vr",
+            "https://bsky.app/profile/ardh.bsky.social"
+          ],
+          "jobTitle": "Founder & CEO",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Realm by Rook"
+          }
+        }}
       />
       <Navigation />
       
@@ -70,11 +93,11 @@ const About = () => {
               {/* Portrait */}
               <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow"></div>
+                  <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl animate-pulse-glow"></div>
                   <img 
                     src={portraitImage} 
-                    alt="Aravindh Ravichandran" 
-                    className="relative rounded-full w-64 h-64 object-cover shadow-2xl hover:shadow-primary/20 transition-all duration-300"
+                    alt="Aravindh Ravichandran - Serial entrepreneur, startup advisor, and podcast host" 
+                    className="relative rounded-3xl w-80 h-96 object-cover shadow-2xl hover:shadow-primary/20 transition-all duration-300"
                   />
                 </div>
               </div>

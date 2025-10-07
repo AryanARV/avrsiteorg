@@ -12,10 +12,24 @@ const Home = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="Aravindh Ravichandran - Startup Advisory, SaaS Founder & Podcast Host"
-        description="Serial entrepreneur, startup mentor, SaaS founder, podcast host, and social impact creator. Trusted by founders and innovators for actionable insights and rapid growth."
-        keywords="Aravindh Ravichandran, startup advisor, SaaS founder, podcast host, entrepreneurship, Rook, Sports29"
-        canonicalUrl="https://sports29.lovable.app/"
+        title="Aravindh Ravichandran: Startup Advisor, SaaS Founder, Podcast Host | Realm by Rook"
+        description="Book startup mentoring, listen to top podcasts, and discover robust SaaS tools by Realm by Rook founder Aravindh Ravichandran. Transform your venture today."
+        keywords="Aravindh Ravichandran, AVR, startup advisor, SaaS founder, podcast host, entrepreneur, Rook, Realm by Rook, business automation, startup mentoring"
+        canonicalUrl="https://aravindh.org"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Aravindh Ravichandran",
+          "alternateName": "AVR",
+          "url": "https://aravindh.org",
+          "image": "https://aravindh.org/assets/AVR_3.png",
+          "jobTitle": "Founder & CEO",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Realm by Rook",
+            "url": "https://realmrook.com"
+          }
+        }}
       />
       <Navigation />
       
@@ -56,9 +70,9 @@ const Home = () => {
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow group-hover:scale-110 transition-transform duration-500"></div>
                   {/* Portrait Image */}
                   <div className="relative">
-                    <img 
+                  <img 
                       src={portraitImage} 
-                      alt="Aravindh Ravichandran" 
+                      alt="Aravindh Ravichandran - Serial entrepreneur and startup advisor" 
                       className="relative rounded-2xl w-full max-w-md mx-auto shadow-2xl hover:shadow-primary/20 transition-all duration-300"
                     />
                   </div>

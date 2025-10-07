@@ -31,10 +31,21 @@ const Podcasts = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="All Podcast Series by Aravindh Ravichandran"
-        description="Explore all three acclaimed podcast shows: Startup Stories, Sports29, and AVR x Amrish. Deep conversations on entrepreneurship, sports, and mindset."
-        keywords="podcasts, Aravindh Ravichandran, Startup Stories, Sports29, AVR x Amrish, entrepreneur podcasts"
-        canonicalUrl="https://sports29.lovable.app/podcasts"
+        title="All Podcasts by Aravindh Ravichandran | Startup Stories, Sports29, AVR x Amrish"
+        description="Explore three acclaimed podcast series by AVR: Startup Stories (founder journeys), Sports29 (athlete stories), and AVR x Amrish (entrepreneurship insights)."
+        keywords="Aravindh Ravichandran podcasts, Startup Stories, Sports29, AVR x Amrish, entrepreneur podcast, startup podcast, business podcast"
+        canonicalUrl="https://aravindh.org/podcasts"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "PodcastSeries",
+          "name": "Podcasts by Aravindh Ravichandran",
+          "description": "Three acclaimed podcast series covering startup journeys, athlete stories, and entrepreneurship insights",
+          "url": "https://aravindh.org/podcasts",
+          "author": {
+            "@type": "Person",
+            "name": "Aravindh Ravichandran"
+          }
+        }}
       />
       <Navigation />
       

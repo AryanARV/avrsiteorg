@@ -11,10 +11,25 @@ const Venture = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="My Ventures - Rook & Realm by Rook | Aravindh Ravichandran"
-        description="Discover Rook: Frictionless SaaS for modern businesses. Explore Realm by Rook's custom growth solutions for legal, media, and marketing industries."
-        keywords="Rook, Realm by Rook, SaaS, automation, startup, Aravindh Ravichandran"
-        canonicalUrl="https://sports29.lovable.app/venture"
+        title="My Ventures: Rook & Realm by Rook | Business Automation SaaS | AVR"
+        description="Explore Rook's frictionless SaaS for modern businesses and Realm by Rook's custom growth solutions for legal, media, and marketing industries. Built by Aravindh Ravichandran."
+        keywords="Rook, Realm by Rook, SaaS, business automation, no-code platform, startup tools, Aravindh Ravichandran, AVR"
+        canonicalUrl="https://aravindh.org/venture"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Rook",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "url": "https://rookhq.com"
+          },
+          "creator": {
+            "@type": "Person",
+            "name": "Aravindh Ravichandran"
+          }
+        }}
       />
       <Navigation />
       

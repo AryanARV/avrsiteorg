@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title: string;
@@ -6,9 +7,12 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
+  type?: string;
+  structuredData?: object;
 }
 
-const SEO = ({ title, description, keywords, ogImage, canonicalUrl }: SEOProps) => {
+const SEO = ({ title, description, keywords, ogImage, canonicalUrl, type = 'website', structuredData }: SEOProps) => {
+  const location = useLocation();
   useEffect(() => {
     // Update title
     document.title = title;
@@ -63,7 +67,37 @@ const SEO = ({ title, description, keywords, ogImage, canonicalUrl }: SEOProps) 
       const twitterImage = document.querySelector('meta[name="twitter:image"]');
       if (twitterImage) twitterImage.setAttribute('content', ogImage);
     }
-  }, [title, description, keywords, ogImage, canonicalUrl]);
+    
+    // Update OG type
+    let ogType = document.querySelector('meta[property="og:type"]');
+    if (!ogType) {
+      ogType = document.createElement('meta');
+      ogType.setAttribute('property', 'og:type');
+      document.head.appendChild(ogType);
+    }
+    ogType.setAttribute('content', type);
+    
+    // Update OG URL
+    const fullUrl = canonicalUrl || `${window.location.origin}${location.pathname}`;
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', fullUrl);
+    
+    // Add structured data
+    if (structuredData) {
+      let script = document.querySelector('script[type="application/ld+json"]');
+      if (!script) {
+        script = document.createElement('script');
+        script.setAttribute('type', 'application/ld+json');
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(structuredData);
+    }
+  }, [title, description, keywords, ogImage, canonicalUrl, type, structuredData, location.pathname]);
   
   return null;
 };

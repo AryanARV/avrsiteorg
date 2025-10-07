@@ -80,10 +80,11 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Contact Us - Get in Touch | AVR"
-        description="Contact AVR for guest requests, business inquiries, collaboration opportunities, or feedback. Reach out via email or contact form."
-        keywords="AVR contact, podcast inquiry, collaboration, business contact, guest request"
-        canonicalUrl="https://sports29.lovable.app/contact"
+        title="Contact Aravindh Ravichandran | Startup Advisory & Business Inquiries"
+        description="Get in touch with Aravindh Ravichandran (AVR) for startup advisory, podcast collaborations, speaking engagements, and Rook/Realm by Rook inquiries."
+        keywords="contact Aravindh Ravichandran, AVR contact, startup advisory, podcast collaboration, speaking engagements, business inquiries"
+        canonicalUrl="https://aravindh.org/contact"
+        type="website"
       />
       <Navigation />
       

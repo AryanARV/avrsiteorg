@@ -9,10 +9,11 @@ const Happenings = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="Happenings - News, Podcasts, Events & Impact | Aravindh Ravichandran"
-        description="Stay updated with Aravindh Ravichandran's latest podcast releases, media features, speaking events, and social impact initiatives."
-        keywords="Aravindh Ravichandran news, podcast episodes, speaking events, social impact, Aravindh Initiative"
-        canonicalUrl="https://sports29.lovable.app/happenings"
+        title="Happenings: News, Podcasts, Events & Impact | Aravindh Ravichandran"
+        description="Latest podcast releases, media features, speaking events, social impact projects, and Rook product updates by Aravindh Ravichandran (AVR)."
+        keywords="Aravindh Ravichandran news, AVR podcasts, startup events, social impact, Rook updates, Realm by Rook launches"
+        canonicalUrl="https://aravindh.org/happenings"
+        type="website"
       />
       <Navigation />
       
