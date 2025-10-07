@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Podcast, Newspaper, Calendar, Heart, Rocket, Award } from "lucide-react";
+import rookLinksLogo from "@/assets/rook-links-logo.png";
 
 const Happenings = () => {
   return (
@@ -296,18 +297,25 @@ const Happenings = () => {
               {/* Rook Links Announcement */}
               <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 mb-8">
                 <CardContent className="p-8 md:p-12 space-y-6">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary">
-                    Rook Links: The Future of Business Automation is Coming Soon
+                  <div className="flex items-center justify-center mb-4">
+                    <img 
+                      src={rookLinksLogo} 
+                      alt="Rook Links Logo" 
+                      className="h-16 md:h-20 w-auto"
+                    />
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary text-center">
+                    Coming Soon
                   </h3>
-                  <div className="space-y-4 text-foreground/80 leading-relaxed">
-                    <p>
-                      We're excited to announce the upcoming launch of <strong className="text-primary">Rook Links</strong>, our revolutionary central hub for business automation, integration, and workflow control designed to help founders scale faster, smarter, and with zero friction.
+                  <div className="space-y-4 text-foreground/80 leading-relaxed text-center">
+                    <p className="text-lg md:text-xl font-semibold">
+                      Turn Your Instagram Grid Into a Visual Link Hub
                     </p>
                     <p>
-                      Rook Links will give startups and agencies instant access to powerful SaaS tools, automated systems, and real-time analytics, all under one streamlined dashboard. Whether you run an agency, a legal firm, or a growing SaaS, Rook Links is built to transform how your business connects, operates, and grows with no code, no limits.
+                      Create clickable, shoppable, trackable Instagram tiles, with pixel-perfect polish.
                     </p>
-                    <p className="font-semibold text-primary">
-                      The product is live soon. For early updates, visit:{" "}
+                    <p className="font-semibold text-primary pt-4">
+                      For early updates, visit:{" "}
                       <a 
                         href="https://links.rookhq.com" 
                         target="_blank" 
@@ -329,18 +337,6 @@ const Happenings = () => {
                     update: "AI-Powered Automation Suite Launch",
                     description: "Introducing intelligent workflow automation that learns from your business processes and optimizes them automatically.",
                     date: "Jan 2025"
-                  },
-                  {
-                    product: "Realm by Rook",
-                    update: "Legal Vertical Expansion",
-                    description: "New features specifically designed for law firms and legal departments, including case management and client communication tools.",
-                    date: "Dec 2024"
-                  },
-                  {
-                    product: "Rook Platform",
-                    update: "Enterprise Security Update",
-                    description: "Enhanced security protocols, SOC 2 compliance, and advanced data encryption for enterprise clients.",
-                    date: "Nov 2024"
                   }
                 ].map((update, index) => (
                   <Card 
