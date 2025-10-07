@@ -16,32 +16,47 @@ const Navigation = () => {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "Podcasts", path: "/podcasts" },
-    { label: "Host", path: "/host" },
-    { label: "Sponsorship", path: "/sponsorship" },
+    { label: "Venture", path: "/venture" },
+    { label: "Happenings", path: "/happenings" },
+    { label: "About", path: "/about" },
     { label: "Contact", path: "/contact" },
-    { label: "Legal", path: "/legal" },
   ];
   
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-lg border-b border-border/50 shadow-lg animate-fade-in">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm animate-fade-in">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          <Link to="/" className="transition-all duration-300 hover:scale-105 flex items-center gap-3">
-            <img src={logoWhite} alt="Sports29 by AVR" className="h-8 w-auto" />
-            <span className="text-white text-lg font-light">| Sports29</span>
+          <Link to="/" className="transition-all duration-300 hover:opacity-80">
+            <span className="text-2xl font-semibold text-primary tracking-tight">Aravindh Ravichandran</span>
           </Link>
           
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-8">
+            {menuItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className={`text-sm font-medium transition-colors hover:text-primary ${
+                  isActive(item.path) ? "text-primary" : "text-foreground/70"
+                }`}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile Navigation */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="p-2 rounded-lg hover:bg-accent transition-colors">
-              <Menu className="h-6 w-6" />
+            <DropdownMenuTrigger className="md:hidden p-2 rounded-lg hover:bg-secondary/50 transition-colors">
+              <Menu className="h-5 w-5 text-primary" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-48 bg-background/95 backdrop-blur-lg border-border">
               {menuItems.map((item) => (
                 <DropdownMenuItem key={item.path} asChild>
                   <Link
                     to={item.path}
-                    className={`w-full cursor-pointer text-white hover:text-primary ${
-                      isActive(item.path) ? "text-primary font-medium" : ""
+                    className={`w-full cursor-pointer hover:text-primary ${
+                      isActive(item.path) ? "text-primary font-medium" : "text-foreground/70"
                     }`}
                   >
                     {item.label}

@@ -1,85 +1,180 @@
 import Navigation from "@/components/Navigation";
-import PodcastTile from "@/components/PodcastTile";
-import Subscribe from "@/components/Subscribe";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import Episode1 from "@/assets/Episode_1.png";
-import Episode2 from "@/assets/Episode_2.png";
-import Episode3 from "@/assets/Episode_3.png";
-import Episode4 from "@/assets/Episode_4.png";
-import Episode5 from "@/assets/Episode_5.png";
-import Episode6 from "@/assets/Episode_6.png";
-import Episode7 from "@/assets/Episode_7.png";
-import Episode8 from "@/assets/Episode_8.png";
-import Episode9 from "@/assets/Episode_9.png";
-import Episode10 from "@/assets/Episode_10.png";
-import Episode11 from "@/assets/Episode_11.png";
-import Episode12 from "@/assets/Episode_12.png";
-import Episode13 from "@/assets/Episode_13.png";
-import Episode14 from "@/assets/Episode_14.png";
-
-const podcasts = [
-  { id: 1, title: "M'Phelps", imageUrl: Episode1, spotifyUrl: "https://open.spotify.com/episode/6k4klt79P2gm8eIVGbV4YE?si=BSDmPHo8QcmhJ-BvEd1AsA", amazonMusicUrl: "https://music.amazon.com/podcasts/e60c2128-1271-4e3d-b4c2-32e5c55bce2a/episodes/4fdab896-531e-4183-be1a-c4f17df23f7b/michael-phelps-deep-water-deeper-battles-mastering-victory-and-vulnerability-episode-1" },
-  { id: 2, title: "Lionel M", imageUrl: Episode2, spotifyUrl: "https://open.spotify.com/episode/2bb0w6lF2pq6uUyHSyyL9v?si=q-1K4sEgRuesdvLcDMbvPg", amazonMusicUrl: "https://music.amazon.com/podcasts/e60c2128-1271-4e3d-b4c2-32e5c55bce2a/episodes/b9764a7a-aaee-4f43-8dd8-3c73913de29e/lionel-messi-breaking-limits-the-rise-of-footballs-little-giant-episode-2" },
-  { id: 3, title: "Mardini", imageUrl: Episode3, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 4, title: "Jordan", imageUrl: Episode4, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 5, title: "Ronaldo", imageUrl: Episode5, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 6, title: "V Kohli", imageUrl: Episode6, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 7, title: "B'Ellison", imageUrl: Episode7, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 8, title: "Woojin", imageUrl: Episode8, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 9, title: "Neymar J", imageUrl: Episode9, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 10, title: "Simone", imageUrl: Episode10, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 11, title: "Stutzman", imageUrl: Episode11, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 12, title: "LeBron", imageUrl: Episode12, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 13, title: "Károly", imageUrl: Episode13, spotifyUrl: "#", amazonMusicUrl: "#" },
-  { id: 14, title: "K'Strug", imageUrl: Episode14, spotifyUrl: "#", amazonMusicUrl: "#" },
-];
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Users, Mic, Building2, Award } from "lucide-react";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-background">
       <SEO 
-        title="Sports29 by AVR - Inspiring Stories of Legendary Athletes | Premium Podcast Series"
-        description="Listen to Sports29 by AVR - deeply researched, emotionally told stories of legendary athletes. Michael Phelps, Lionel Messi, Simone Biles & more on Spotify and Amazon Music."
-        keywords="Sports29, AVR podcast, sports podcast, athlete stories, Michael Phelps, Lionel Messi, Simone Biles, inspirational sports, Olympic athletes"
+        title="Aravindh Ravichandran - Startup Advisory, SaaS Founder & Podcast Host"
+        description="Serial entrepreneur, startup mentor, SaaS founder, podcast host, and social impact creator. Trusted by founders and innovators for actionable insights and rapid growth."
+        keywords="Aravindh Ravichandran, startup advisor, SaaS founder, podcast host, entrepreneurship, Rook, Sports29"
         canonicalUrl="https://sports29.lovable.app/"
       />
       <Navigation />
       
-      <main className="flex-1 pt-24 pb-16">
-        <div className="container mx-auto px-6">
-          {/* Header Section */}
-          <header className="text-center mb-16 animate-fade-in-scale">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-foreground animate-slide-up">
-              Listen to Sports29 by AVR
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              Deeply researched, emotionally told stories of legendary athletes and unforgettable journeys
-            </p>
-          </header>
-          
-          {/* Podcast Grid */}
-          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {podcasts.map((podcast, index) => (
-              <div 
-                key={podcast.id} 
-                className="stagger-fade"
-                style={{ animationDelay: `${index * 0.08}s` }}
-              >
-                <PodcastTile
-                  title={podcast.title}
-                  imageUrl={podcast.imageUrl}
-                  spotifyUrl={podcast.spotifyUrl}
-                  amazonMusicUrl={podcast.amazonMusicUrl}
-                />
+      <main className="flex-1 pt-24">
+        {/* Hero Section */}
+        <section className="py-20 md:py-32">
+          <div className="container mx-auto px-6">
+            <div className="max-w-5xl mx-auto text-center space-y-8 animate-fade-in">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary leading-tight">
+                Hire Aravindh Ravichandran — Startup Advisory Calls
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Serial entrepreneur, startup mentor, SaaS founder, podcast host, and social impact creator. 
+                Trusted by founders and innovators for actionable insights and rapid growth.
+              </p>
+              <div className="pt-4">
+                <Button 
+                  size="lg" 
+                  className="text-base px-8 py-6 hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  Book a Startup Advisory Call
+                </Button>
               </div>
-            ))}
-          </section>
-        </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Impact Metrics */}
+        <section className="py-16 border-y border-border/50 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {[
+                { icon: Users, label: "200+ founders advised", color: "text-primary" },
+                { icon: Mic, label: "3 successful podcast shows", color: "text-primary" },
+                { icon: Building2, label: "Founder, CEO of Rook (SaaS)", color: "text-primary" },
+                { icon: Award, label: "Featured in 10+ media outlets", color: "text-primary" },
+              ].map((metric, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col items-center text-center space-y-3 animate-slide-up hover:scale-105 transition-transform duration-300"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <metric.icon className={`h-10 w-10 ${metric.color}`} />
+                  <p className="text-sm md:text-base font-medium text-foreground/80">{metric.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Podcast Shows */}
+        <section className="py-20 md:py-32">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
+              Discover My Podcast Shows
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  title: "Startup Stories: Realm by Rook",
+                  description: "Transformative journeys and lessons from the world of founders, innovators, and scaling startups.",
+                  link: "/podcasts"
+                },
+                {
+                  title: "Sports29 by AVR",
+                  description: "Untold athlete origins, grit, and victory. Where sport meets story.",
+                  link: "/podcasts"
+                },
+                {
+                  title: "AVR x Amrish",
+                  description: "Unfiltered conversations on entrepreneurship, mindset, and global perspectives.",
+                  link: "/podcasts"
+                },
+              ].map((show, index) => (
+                <Card 
+                  key={index} 
+                  className="hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card border-border/50"
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <CardContent className="p-8 space-y-4">
+                    <h3 className="text-xl font-bold text-primary">{show.title}</h3>
+                    <p className="text-muted-foreground leading-relaxed">{show.description}</p>
+                    <Button 
+                      variant="outline" 
+                      className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
+                      onClick={() => window.location.href = show.link}
+                    >
+                      Listen Now
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Venture Spotlight */}
+        <section className="py-20 md:py-32 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto text-center space-y-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-primary">
+                My SaaS Venture: Rook
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Rook delivers frictionless, scalable SaaS solutions for modern businesses. 
+                Realm by Rook dives deeper into client success, automation, and innovation 
+                for verticals in legal, media, and growth marketing.
+              </p>
+              <div className="pt-4">
+                <Button 
+                  size="lg" 
+                  variant="outline"
+                  className="text-base px-8 py-6 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 border-2 border-primary"
+                  onClick={() => window.open('https://realmrook.com', '_blank')}
+                >
+                  Visit Rook
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Happenings Preview */}
+        <section className="py-20 md:py-32">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
+              Latest Happenings
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+              {[
+                { type: "Podcast", title: "New Episode: Sports29", date: "Jan 2025" },
+                { type: "Media", title: "Featured in Tech Today", date: "Dec 2024" },
+                { type: "Speaking", title: "Startup Summit 2024", date: "Nov 2024" },
+                { type: "Impact", title: "Community Initiative Launch", date: "Oct 2024" },
+              ].map((happening, index) => (
+                <Card 
+                  key={index}
+                  className="hover:scale-105 hover:shadow-xl transition-all duration-300 bg-card border-border/50"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <CardContent className="p-6 space-y-2">
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">{happening.type}</p>
+                    <h3 className="text-base font-bold text-foreground">{happening.title}</h3>
+                    <p className="text-sm text-muted-foreground">{happening.date}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button 
+                variant="outline"
+                size="lg"
+                className="hover:bg-primary hover:text-primary-foreground transition-colors border-2 border-primary"
+                onClick={() => window.location.href = '/happenings'}
+              >
+                See All Happenings
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
-      
-      {/* Subscribe Section */}
-      <Subscribe />
       
       <Footer />
     </div>
