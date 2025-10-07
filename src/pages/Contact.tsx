@@ -80,9 +80,9 @@ const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <SEO 
-        title="Contact Us - Get in Touch | Sports29 by AVR"
-        description="Contact Sports29 by AVR for guest requests, business inquiries, collaboration opportunities, or feedback. Reach out via email or contact form."
-        keywords="Sports29 contact, podcast inquiry, collaboration, business contact, guest request"
+        title="Contact Us - Get in Touch | AVR"
+        description="Contact AVR for guest requests, business inquiries, collaboration opportunities, or feedback. Reach out via email or contact form."
+        keywords="AVR contact, podcast inquiry, collaboration, business contact, guest request"
         canonicalUrl="https://sports29.lovable.app/contact"
       />
       <Navigation />
@@ -98,7 +98,7 @@ const Contact = () => {
               We'd love to hear from you!
             </p>
             <p className="text-base text-foreground/90 leading-relaxed animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              For guest requests, business inquiries, collaboration, or feedback about Sports29 by AVR, please fill out the form below or reach us directly.
+              For guest requests, business inquiries, collaboration, or feedback about AVR, please fill out the form below or reach us directly.
             </p>
           </div>
 

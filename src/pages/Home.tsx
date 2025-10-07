@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Mic, Building2, Award } from "lucide-react";
 import portraitImage from "@/assets/AVR_3.png";
+import rookLogo from "@/assets/rook-logo.png";
+import realmLogo from "@/assets/realm-logo.png";
 
 const Home = () => {
   return (
@@ -25,11 +27,10 @@ const Home = () => {
               {/* Left: Content */}
               <div className="space-y-8 animate-fade-in">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                  Build, Scale, Win—With Aravindh Ravichandran
+                  Build, Scale, Win With Aravindh Ravichandran
                 </h1>
                 <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-                  Serial entrepreneur, global advisor, SaaS founder, and podcast host.
-                  I help ambitious founders launch, grow, and transform ventures with clarity, speed, and smart execution.
+                  Serial entrepreneur, global advisor, SaaS founder, and podcast host. I help ambitious founders launch, grow, and transform ventures with clarity, speed, and smart execution.
                 </p>
                 <div className="pt-4">
                   <Button 
@@ -149,7 +150,11 @@ const Home = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <Card className="hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card border-border/50">
                 <CardContent className="p-8 space-y-4 text-center">
-                  <Building2 className="h-16 w-16 text-primary mx-auto" />
+                  <img 
+                    src={rookLogo} 
+                    alt="Rook" 
+                    className="h-16 w-auto mx-auto"
+                  />
                   <h3 className="text-2xl font-bold text-primary">Rook</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Frictionless, scalable SaaS solutions for modern businesses. Automation and innovation at scale.
@@ -167,7 +172,11 @@ const Home = () => {
 
               <Card className="hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card border-border/50">
                 <CardContent className="p-8 space-y-4 text-center">
-                  <Award className="h-16 w-16 text-primary mx-auto" />
+                  <img 
+                    src={realmLogo} 
+                    alt="Realm by Rook" 
+                    className="h-16 w-auto mx-auto"
+                  />
                   <h3 className="text-2xl font-bold text-primary">Realm by Rook</h3>
                   <p className="text-muted-foreground leading-relaxed">
                     Custom growth solutions for legal, media, and marketing verticals. Client success through innovation.

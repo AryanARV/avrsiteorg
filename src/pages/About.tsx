@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
-import portraitImage from "@/assets/AVR_3.png";
+import portraitImage from "@/assets/AVR_speaking.png";
 
 const About = () => {
   const socialLinks = [

@@ -292,6 +292,35 @@ const Happenings = () => {
                 </h2>
               </div>
 
+              {/* Rook Links Announcement */}
+              <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 mb-8">
+                <CardContent className="p-8 md:p-12 space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary">
+                    Rook Links: The Future of Business Automation is Coming Soon
+                  </h3>
+                  <div className="space-y-4 text-foreground/80 leading-relaxed">
+                    <p>
+                      We're excited to announce the upcoming launch of <strong className="text-primary">Rook Links</strong>, our revolutionary central hub for business automation, integration, and workflow control designed to help founders scale faster, smarter, and with zero friction.
+                    </p>
+                    <p>
+                      Rook Links will give startups and agencies instant access to powerful SaaS tools, automated systems, and real-time analytics, all under one streamlined dashboard. Whether you run an agency, a legal firm, or a growing SaaS, Rook Links is built to transform how your business connects, operates, and grows with no code, no limits.
+                    </p>
+                    <p className="font-semibold text-primary">
+                      The product is live soon. For early updates, visit:{" "}
+                      <a 
+                        href="https://links.rookhq.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="underline hover:text-primary/80 transition-colors"
+                      >
+                        links.rookhq.com
+                      </a>
+                      {" "}(Coming Soon)
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
               <div className="space-y-6">
                 {[
                   {

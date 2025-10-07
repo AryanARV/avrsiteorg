@@ -4,6 +4,8 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Rocket, Target, Zap, Shield, Users, TrendingUp } from "lucide-react";
+import rookLogo from "@/assets/rook-logo.png";
+import realmLogo from "@/assets/realm-logo.png";
 
 const Venture = () => {
   return (
@@ -34,6 +36,11 @@ const Venture = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
+                <img 
+                  src={rookLogo} 
+                  alt="Rook" 
+                  className="h-20 w-auto mx-auto mb-6"
+                />
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
                   Rook: Frictionless Growth Through Automation
                 </h2>
@@ -74,13 +81,13 @@ const Venture = () => {
                 ))}
               </div>
 
-              <div className="text-center">
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <Button 
                   size="lg"
                   className="px-8 py-6 text-base hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.open('https://rookhq.com', '_blank')}
                 >
-                  Try Rook / Request Demo
+                  Visit Rook
                 </Button>
               </div>
             </div>
@@ -92,6 +99,11 @@ const Venture = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
+                <img 
+                  src={realmLogo} 
+                  alt="Realm by Rook" 
+                  className="h-20 w-auto mx-auto mb-6"
+                />
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
                   Realm by Rook: Custom Growth for Your Industry
                 </h2>
@@ -130,6 +142,16 @@ const Venture = () => {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+
+              <div className="flex flex-col md:flex-row gap-4 justify-center items-center mt-12">
+                <Button 
+                  size="lg"
+                  className="px-8 py-6 text-base hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
+                  onClick={() => window.open('https://realmrook.com', '_blank')}
+                >
+                  Visit Realm
+                </Button>
               </div>
             </div>
           </div>
