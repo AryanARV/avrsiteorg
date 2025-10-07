@@ -78,7 +78,7 @@ const Venture = () => {
                 <Button 
                   size="lg"
                   className="px-8 py-6 text-base hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
-                  onClick={() => window.open('https://realmrook.com', '_blank')}
+                  onClick={() => window.open('https://rookhq.com', '_blank')}
                 >
                   Try Rook / Request Demo
                 </Button>

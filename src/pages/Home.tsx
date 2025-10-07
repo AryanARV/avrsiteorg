@@ -4,6 +4,7 @@ import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, Mic, Building2, Award } from "lucide-react";
+import portraitImage from "@/assets/AVR_3.png";
 
 const Home = () => {
   return (
@@ -52,13 +53,13 @@ const Home = () => {
                 <div className="relative group">
                   {/* VFX Background Glow */}
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow group-hover:scale-110 transition-transform duration-500"></div>
-                  {/* Placeholder for portrait - user will paste their image */}
-                  <div className="relative bg-card border-2 border-primary/30 rounded-2xl p-8 text-center space-y-4 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300">
-                    <p className="text-sm font-semibold text-primary uppercase tracking-wider">Portrait Image</p>
-                    <p className="text-foreground/70 text-sm">
-                      Paste/upload your high-res portrait here. 
-                      VFX background will automatically apply soft glow and animated particles in primary color.
-                    </p>
+                  {/* Portrait Image */}
+                  <div className="relative">
+                    <img 
+                      src={portraitImage} 
+                      alt="Aravindh Ravichandran" 
+                      className="relative rounded-2xl w-full max-w-md mx-auto shadow-2xl hover:shadow-primary/20 transition-all duration-300"
+                    />
                   </div>
                 </div>
               </div>
@@ -100,17 +101,17 @@ const Home = () => {
                 {
                   title: "Startup Stories: Realm by Rook",
                   description: "Transformative journeys and lessons from the world of founders, innovators, and scaling startups.",
-                  link: "/podcasts"
+                  link: "https://realmrook.com/podcasts"
                 },
                 {
                   title: "Sports29 by AVR",
                   description: "Untold athlete origins, grit, and victory. Where sport meets story.",
-                  link: "/podcasts"
+                  link: "https://sports29.aravindh.org"
                 },
                 {
                   title: "AVR x Amrish",
                   description: "Unfiltered conversations on entrepreneurship, mindset, and global perspectives.",
-                  link: "/podcasts"
+                  link: "https://instagram.com/arav.vr"
                 },
               ].map((show, index) => (
                 <Card 
@@ -119,12 +120,16 @@ const Home = () => {
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <CardContent className="p-8 space-y-4">
+                    {/* Thumbnail Placeholder */}
+                    <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center mb-4">
+                      <Mic className="h-16 w-16 text-primary/40" />
+                    </div>
                     <h3 className="text-xl font-bold text-primary">{show.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{show.description}</p>
                     <Button 
                       variant="outline" 
                       className="w-full hover:bg-primary hover:text-primary-foreground transition-colors"
-                      onClick={() => window.location.href = show.link}
+                      onClick={() => window.open(show.link, '_blank')}
                     >
                       Listen Now
                     </Button>
@@ -138,25 +143,45 @@ const Home = () => {
         {/* Venture Spotlight */}
         <section className="py-20 md:py-32 bg-card/30">
           <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl md:text-5xl font-bold text-primary">
-                My SaaS Venture: Rook
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Rook delivers frictionless, scalable SaaS solutions for modern businesses. 
-                Realm by Rook dives deeper into client success, automation, and innovation 
-                for verticals in legal, media, and growth marketing.
-              </p>
-              <div className="pt-4">
-                <Button 
-                  size="lg" 
-                  variant="outline"
-                  className="text-base px-8 py-6 hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 border-2 border-primary"
-                  onClick={() => window.open('https://realmrook.com', '_blank')}
-                >
-                  Visit Rook
-                </Button>
-              </div>
+            <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
+              My Ventures
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+              <Card className="hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card border-border/50">
+                <CardContent className="p-8 space-y-4 text-center">
+                  <Building2 className="h-16 w-16 text-primary mx-auto" />
+                  <h3 className="text-2xl font-bold text-primary">Rook</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Frictionless, scalable SaaS solutions for modern businesses. Automation and innovation at scale.
+                  </p>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="w-full hover:bg-primary hover:text-primary-foreground transition-colors border-2 border-primary"
+                    onClick={() => window.open('https://rookhq.com', '_blank')}
+                  >
+                    Visit Rook
+                  </Button>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:scale-105 hover:shadow-2xl transition-all duration-300 bg-card border-border/50">
+                <CardContent className="p-8 space-y-4 text-center">
+                  <Award className="h-16 w-16 text-primary mx-auto" />
+                  <h3 className="text-2xl font-bold text-primary">Realm by Rook</h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Custom growth solutions for legal, media, and marketing verticals. Client success through innovation.
+                  </p>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    className="w-full hover:bg-primary hover:text-primary-foreground transition-colors border-2 border-primary"
+                    onClick={() => window.open('https://realmrook.com', '_blank')}
+                  >
+                    Visit Realm
+                  </Button>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
