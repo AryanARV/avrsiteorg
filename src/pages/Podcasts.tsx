@@ -2,6 +2,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
+import Episode1 from "@/assets/Episode_1.png";
+import Episode2 from "@/assets/Episode_2.png";
+import Episode3 from "@/assets/Episode_3.png";
+import Episode4 from "@/assets/Episode_4.png";
+import Episode5 from "@/assets/Episode_5.png";
 
 const podcastSeries = [
   {
@@ -9,21 +14,27 @@ const podcastSeries = [
     title: "Startup Stories: Realm by Rook",
     subtitle: "Founder journeys, startup lessons, scaling secrets.",
     link: "https://realmrook.com/podcasts",
-    episodes: [] // Add actual episodes data when available
+    episodes: []
   },
   {
     id: 2,
     title: "Sports29 by AVR",
     subtitle: "Untold athlete stories, grit, and glory.",
     link: "https://sports29.aravindh.org",
-    episodes: [] // Add actual episodes data when available
+    episodes: [
+      { id: 1, title: "M'Phelps", image: Episode1 },
+      { id: 2, title: "Lionel M", image: Episode2 },
+      { id: 3, title: "Mardini", image: Episode3 },
+      { id: 4, title: "Jordan", image: Episode4 },
+      { id: 5, title: "Ronaldo", image: Episode5 }
+    ]
   },
   {
     id: 3,
     title: "AVR x Amrish",
     subtitle: "Raw conversations on entrepreneurship, mindset, and the new world.",
     link: "https://instagram.com/arav.vr",
-    episodes: [] // Add actual episodes data when available
+    episodes: []
   }
 ];
 
@@ -83,30 +94,41 @@ const Podcasts = () => {
                 <div className="relative mb-6">
                   <div className="overflow-x-auto pb-4 hide-scrollbar">
                     <div className="flex gap-6 min-w-max">
-                      {/* Placeholder Episode Tiles */}
-                      {[1, 2, 3, 4, 5].map((episodeNum) => (
-                        <div 
-                          key={episodeNum}
-                          className="bg-card border border-border/50 rounded-lg p-6 w-80 hover:scale-105 hover:shadow-xl transition-all duration-300"
-                        >
-                          {/* Episode Cover Placeholder */}
-                          <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-4 flex items-center justify-center">
-                            <span className="text-primary/50 font-bold text-2xl">EP {episodeNum}</span>
+                      {series.episodes.length > 0 ? (
+                        series.episodes.map((episode) => (
+                          <div 
+                            key={episode.id}
+                            className="bg-card border border-border/50 rounded-lg overflow-hidden w-80 hover:scale-105 hover:shadow-xl transition-all duration-300"
+                          >
+                            <img 
+                              src={episode.image} 
+                              alt={`Sports29 Episode ${episode.id}: ${episode.title}`}
+                              className="w-full aspect-square object-cover"
+                            />
                           </div>
-                          
-                          {/* Episode Info */}
-                          <h3 className="font-bold text-primary mb-2 line-clamp-2">
-                            Episode {episodeNum} Title
-                          </h3>
-                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                            Episode description goes here with compelling details about the content.
-                          </p>
-                          <div className="flex items-center justify-between text-xs text-muted-foreground">
-                            <span>Episode {episodeNum}</span>
-                            <span>12:34</span>
+                        ))
+                      ) : (
+                        [1, 2, 3, 4, 5].map((episodeNum) => (
+                          <div 
+                            key={episodeNum}
+                            className="bg-card border border-border/50 rounded-lg p-6 w-80 hover:scale-105 hover:shadow-xl transition-all duration-300"
+                          >
+                            <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-4 flex items-center justify-center">
+                              <span className="text-primary/50 font-bold text-2xl">EP {episodeNum}</span>
+                            </div>
+                            <h3 className="font-bold text-primary mb-2 line-clamp-2">
+                              Episode {episodeNum} Title
+                            </h3>
+                            <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                              Episode description goes here with compelling details about the content.
+                            </p>
+                            <div className="flex items-center justify-between text-xs text-muted-foreground">
+                              <span>Episode {episodeNum}</span>
+                              <span>12:34</span>
+                            </div>
                           </div>
-                        </div>
-                      ))}
+                        ))
+                      )}
                     </div>
                   </div>
                 </div>
