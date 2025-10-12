@@ -10,8 +10,42 @@ import realmLogo from "@/assets/realm-logo.png";
 import podcastThumb1 from "@/assets/podcast-thumb-1.png";
 import podcastThumb2 from "@/assets/podcast-thumb-2.png";
 import podcastThumb3 from "@/assets/podcast-thumb-3.png";
+import { Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
 
 const Home = () => {
+   const socialLinks = [
+    {
+      name: "Instagram",
+      url: "https://instagram.com/arav.vr",
+      icon: Instagram
+    },
+    {
+      name: "X (Twitter)",
+      url: "https://x.com/AravAVR",
+      icon: Twitter
+    },
+    {
+      name: "YouTube",
+      url: "https://youtube.com/@ardh",
+      icon: Youtube
+    },
+    {
+      name: "LinkedIn",
+      url: "https://linkedin.com/in/avra",
+      icon: Linkedin
+    },
+    {
+      name: "Threads",
+      url: "https://threads.com/arav.vr",
+      icon: Instagram
+    },
+    {
+      name: "Bluesky",
+      url: "https://bsky.app/profile/ardh.bsky.social",
+      icon: Twitter
+    }
+  ];
+
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <SEO 
@@ -60,8 +94,8 @@ const Home = () => {
                 </div>
                 {/* Social Proof */}
                 <div className="flex flex-wrap gap-4 text-sm text-foreground/70 pt-4">
-                  <span>✓ Trusted by 200+ founders</span>
-                  <span>✓ Featured on 10+ podcasts</span>
+                  <span>✓ Trusted by 100+ founders</span>
+                  <span>✓ Featured on 22+ podcasts</span>
                   <span>✓ CEO of Rook</span>
                 </div>
               </div>
@@ -90,10 +124,10 @@ const Home = () => {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
-                { icon: Users, label: "200+ founders advised", color: "text-primary" },
-                { icon: Mic, label: "3 successful podcast shows", color: "text-primary" },
-                { icon: Building2, label: "Founder, CEO of Rook (SaaS)", color: "text-primary" },
-                { icon: Award, label: "Featured in 10+ media outlets", color: "text-primary" },
+                { icon: Users, label: "100+ founders advised", color: "text-primary" },
+                { icon: Mic, label: "22 successful podcast shows", color: "text-primary" },
+                { icon: Building2, label: "Founder, CEO of Rook", color: "text-primary" },
+                { icon: Award, label: "Award Winning Entrepreneur", color: "text-primary" },
               ].map((metric, index) => (
                 <div 
                   key={index} 
@@ -179,9 +213,9 @@ const Home = () => {
                     alt="Rook" 
                     className="h-16 w-auto mx-auto"
                   />
-                  <h3 className="text-2xl font-bold text-primary">Rook</h3>
+                  {/* <h3 className="text-2xl font-bold text-primary">Rook</h3> */}
                   <p className="text-muted-foreground leading-relaxed">
-                    Frictionless, scalable SaaS solutions for modern businesses. Automation and innovation at scale.
+                  We craft focused SaaS products that empower creators, freelancers, and founders to get more done with less.
                   </p>
                   <Button 
                     size="lg" 
@@ -201,9 +235,9 @@ const Home = () => {
                     alt="Realm by Rook" 
                     className="h-16 w-auto mx-auto"
                   />
-                  <h3 className="text-2xl font-bold text-primary">Realm by Rook</h3>
+                  {/* <h3 className="text-2xl font-bold text-primary">Realm by Rook</h3> */}
                   <p className="text-muted-foreground leading-relaxed">
-                    Custom growth solutions for legal, media, and marketing verticals. Client success through innovation.
+                  At Realm by Rook, we blend creativity and technology to build experiences that inspire action.
                   </p>
                   <Button 
                     size="lg" 
@@ -259,10 +293,10 @@ const Home = () => {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
               {[
-                { type: "Podcast", title: "New Episode: Sports29", date: "Jan 2025" },
-                { type: "Media", title: "Featured in Tech Today", date: "Dec 2024" },
-                { type: "Speaking", title: "Startup Summit 2024", date: "Nov 2024" },
-                { type: "Impact", title: "Community Initiative Launch", date: "Oct 2024" },
+                { type: "Podcast", title: "New Episode: Sports29", date: "Oct 2025" },
+                { type: "Media", title: "Featured in Finext Award", date: "Feb 2024" },
+                { type: "Speaking", title: "Startup Summit 2024", date: "Jan 2026" },
+                { type: "Impact", title: "Community Initiative Launch", date: "May 2026" },
               ].map((happening, index) => (
                 <Card 
                   key={index}
@@ -289,6 +323,61 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+
+          {/* Social Links */}
+        <section className="py-16 md:py-24 bg-card/30">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+                Connect With Me
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 bg-card border border-border/50 rounded-lg hover:scale-105 hover:shadow-xl hover:border-primary transition-all duration-300"
+                  >
+                    <div className="p-2 bg-primary rounded-lg">
+                      <social.icon className="h-5 w-5 text-primary-foreground" />
+                    </div>
+                    <span className="text-sm font-medium text-foreground">{social.name}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Values */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
+                Core Values & Mission
+              </h2>
+              <div className="grid md:grid-cols-2 gap-8">
+                {[
+                  "Empowering Founders",
+                  "Building Automated Futures",
+                  "Storytelling with Impact",
+                  "Championing Sport, Technology, and Social Good"
+                ].map((value, index) => (
+                  <div 
+                    key={index}
+                    className="p-6 bg-card border border-border/50 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
+                  >
+                    <h3 className="text-xl font-bold text-primary">{value}</h3>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
       </main>
       
       <Footer />

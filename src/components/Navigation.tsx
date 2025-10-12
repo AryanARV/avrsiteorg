@@ -16,7 +16,7 @@ const Navigation = () => {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
-    { label: "Host", path: "/host" },
+    // { label: "Host", path: "/host" },
     { label: "Podcasts", path: "/podcasts" },
     { label: "Venture", path: "/venture" },
     { label: "Happenings", path: "/happenings" },

@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Podcast, Newspaper, Calendar, Heart, Rocket, Award } from "lucide-react";
 import rookLinksLogo from "@/assets/rook-links-logo.png";
+import AwardImg from "@/assets/finextaward.jpg";
+import Spotify from "@/assets/spotify-button.png"
+import Amazon from "@/assets/amazon-music-button.png"
 
 const Happenings = () => {
   return (
@@ -72,7 +75,37 @@ const Happenings = () => {
                       <h3 className="text-xl font-bold text-foreground">{podcast.episode}</h3>
                       <p className="text-muted-foreground">{podcast.description}</p>
                       <p className="text-sm text-foreground/60">{podcast.date}</p>
+                      <div className="flex flex-row gap-1.5 justify-center items-center">
+            <a 
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
+              aria-label={`Listen to on Spotify`}
+            >
+              <img 
+                src={Spotify} 
+                alt="Listen on Spotify" 
+                className="h-[52px] w-auto"
+              />
+            </a>
+            
+            <a 
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
+              aria-label={`Listen to  on Amazon Music`}
+            >
+              <img 
+                src={Amazon} 
+                alt="Listen on Amazon Music" 
+                className="h-10 w-auto"
+              />
+            </a>
+          </div>
                     </CardContent>
+                    
                   </Card>
                 ))}
               </div>
@@ -151,7 +184,7 @@ const Happenings = () => {
               {/* FiNext Award */}
               <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 hover:shadow-2xl transition-all duration-300 max-w-3xl mx-auto">
                 <CardContent className="p-8 text-center space-y-4">
-                  <Award className="h-16 w-16 text-primary mx-auto" />
+                  <img src={AwardImg} alt="Awarm Image"/>
                   <h3 className="text-2xl font-bold text-primary">FiNext Award Dubai</h3>
                   <p className="text-lg font-semibold text-foreground">Innovation in Technology and SaaS</p>
                   <p className="text-muted-foreground">
@@ -188,25 +221,25 @@ const Happenings = () => {
                     type: "Webinar",
                     title: "Scaling Your First SaaS Product",
                     venue: "Online",
-                    date: "Feb 15, 2025"
+                    date: "Nov 15, 2025"
                   },
                   {
                     type: "Conference",
-                    title: "Startup Summit 2025",
-                    venue: "Bangalore, India",
-                    date: "Mar 22, 2025"
+                    title: "Startup Summit 2026",
+                    venue: "Chennai, India",
+                    date: "Mar 22, 2026"
                   },
                   {
                     type: "Podcast Interview",
                     title: "Guest on The Founder's Journey",
                     venue: "Online Recording",
-                    date: "Feb 28, 2025"
+                    date: "Feb 28, 2026"
                   },
                   {
                     type: "Workshop",
                     title: "Building Global Startups from India",
-                    venue: "Mumbai, India",
-                    date: "Apr 10, 2025"
+                    venue: "Yet To Decided",
+                    date: "Yet To Decided"
                   }
                 ].map((event, index) => (
                   <Card 
@@ -295,7 +328,7 @@ const Happenings = () => {
               </div>
 
               {/* Rook Links Announcement */}
-              <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 mb-8">
+              {/* <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-2 border-primary/30 hover:shadow-2xl transition-all duration-300 mb-8">
                 <CardContent className="p-8 md:p-12 space-y-6">
                   <div className="flex items-center justify-center mb-4">
                     <img 
@@ -328,15 +361,15 @@ const Happenings = () => {
                     </p>
                   </div>
                 </CardContent>
-              </Card>
+              </Card> */}
 
               <div className="space-y-6">
                 {[
                   {
                     product: "Rook Platform",
-                    update: "AI-Powered Automation Suite Launch",
-                    description: "Introducing intelligent workflow automation that learns from your business processes and optimizes them automatically.",
-                    date: "Jan 2025"
+                    update: "Rook Links",
+                    description: "Turn Your Instagram Grid Into a Visual Link Hub. Create clickable, shoppable, trackable Instagram tiles, with pixel-perfect polish. For early updates, visit: links.rookhq.com (Coming Soon)",
+                    date: "Oct 2025"
                   }
                 ].map((update, index) => (
                   <Card 

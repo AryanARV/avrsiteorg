@@ -88,35 +88,38 @@ const About = () => {
 
         {/* Profile Section */}
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto space-y-12">
-              {/* Portrait */}
-              <div className="flex justify-center animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl animate-pulse-glow"></div>
-                  <img 
-                    src={portraitImage} 
-                    alt="Aravindh Ravichandran - Serial entrepreneur, startup advisor, and podcast host" 
-                    className="relative rounded-3xl w-80 h-96 object-cover shadow-2xl hover:shadow-primary/20 transition-all duration-300"
-                  />
-                </div>
-              </div>
+  <div className="container mx-auto px-6">
+    <div className="flex flex-col md:flex-row items-center md:items-start max-w-6xl mx-auto gap-12">
+      
+      {/* Portrait */}
+      <div className="flex-shrink-0 flex justify-center md:justify-start animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className="relative group">
+          <div className="absolute inset-0 bg-primary/20 rounded-3xl blur-3xl animate-pulse-glow"></div>
+          <img
+            src={portraitImage}
+            alt="Aravindh Ravichandran - Serial entrepreneur, startup advisor, and podcast host"
+            className="relative rounded-3xl w-80 h-96 object-cover shadow-2xl hover:shadow-primary/20 transition-all duration-300"
+          />
+        </div>
+      </div>
 
-              {/* Bio */}
-              <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
-                <p>
-                  Aravindh Ravichandran, known as AVR, is a multidisciplinary Indian entrepreneur, advisor, writer, and podcast creator. With a deep passion for technology, sports, and social impact, Aravindh has helped launch and scale ventures in SaaS, media, and advisory—championing growth, automation, and positive change.
-                </p>
-                <p>
-                  From founding Rook and its vertical Realm by Rook, to hosting acclaimed digital shows like Startup Stories, Sports29, and AVR x Amrish, Aravindh brings vision, mentorship, and powerful storytelling to every project. His guidance has shaped hundreds of founders, and his voice resonates through the entrepreneurial, athletic, and innovation communities.
-                </p>
-                <p>
-                  Outside business, Aravindh leads impact projects through the Aravindh Initiative, promoting blood donation, mentoring up-and-coming talent, and advancing thought leadership through podcasts and media. His story is one of determination, curiosity, and creating lasting value.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+      {/* Bio */}
+      <div className="flex-1 space-y-6 text-lg text-foreground/80 leading-relaxed">
+        <p>
+          Aravindh Ravichandran, known as AVR, is a multidisciplinary Indian entrepreneur, advisor, writer, and podcast creator. With a deep passion for technology, sports, and social impact, Aravindh has helped launch and scale ventures in SaaS, media, and advisory championing growth, automation, and positive change.
+        </p>
+        <p>
+          From founding Rook and its vertical Realm by Rook, to hosting acclaimed digital shows like Startup Stories, Sports29, and AVR x Amrish, Aravindh brings vision, mentorship, and powerful storytelling to every project. His guidance has shaped hundreds of founders, and his voice resonates through the entrepreneurial, athletic, and innovation communities.
+        </p>
+        <p>
+          Outside business, Aravindh leads impact projects through the Aravindh Initiative, promoting blood donation, mentoring up and coming talent, and advancing thought leadership through podcasts and media. His story is one of determination, curiosity, and creating lasting value.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
         {/* Social Links */}
         <section className="py-16 md:py-24 bg-card/30">
