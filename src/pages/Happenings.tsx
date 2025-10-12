@@ -49,9 +49,10 @@ const Happenings = () => {
                 {[
                   {
                     show: "Sports29 by AVR",
-                    episode: "Episode 14: Championship Mindset",
+                    episode: "Episode 14: K Strug",
                     description: "Exploring the mental game of elite athletes",
                     date: "Jan 2025"
+
                   },
                   {
                     show: "Startup Stories: Realm by Rook",
@@ -76,34 +77,34 @@ const Happenings = () => {
                       <p className="text-muted-foreground">{podcast.description}</p>
                       <p className="text-sm text-foreground/60">{podcast.date}</p>
                       <div className="flex flex-row gap-1.5 justify-center items-center">
-            <a 
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
-              aria-label={`Listen to on Spotify`}
-            >
-              <img 
-                src={Spotify} 
-                alt="Listen on Spotify" 
-                className="h-[52px] w-auto"
-              />
-            </a>
-            
-            <a 
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
-              aria-label={`Listen to  on Amazon Music`}
-            >
-              <img 
-                src={Amazon} 
-                alt="Listen on Amazon Music" 
-                className="h-10 w-auto"
-              />
-            </a>
-          </div>
+                        <a 
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
+                          aria-label={`Listen to on Spotify`}
+                        >
+                          <img 
+                            src={Spotify} 
+                            alt="Listen on Spotify" 
+                            className="h-[52px] w-auto"
+                          />
+                        </a>
+                        
+                        <a 
+                          href="#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
+                          aria-label={`Listen to  on Amazon Music`}
+                        >
+                          <img 
+                            src={Amazon} 
+                            alt="Listen on Amazon Music" 
+                            className="h-10 w-auto"
+                          />
+                        </a>
+                      </div>
                     </CardContent>
                     
                   </Card>
@@ -188,9 +189,9 @@ const Happenings = () => {
                   <img src={AwardImg} alt="Awarm Image"/>
                   </div>
                   <div className="flex flex-col justify-center items-center">
-                  <h3 className="text-2xl font-bold text-primary">FiNext Award Dubai</h3>
-                  <p className="text-lg font-semibold text-foreground">Innovation in Technology and SaaS</p>
-                  <p className="text-muted-foreground">
+                  <h3 className="text-2xl font-bold  text-primary">FiNext Award Dubai</h3>
+                  <p className="text-lg py-3 font-semibold text-foreground">Innovation in Technology and SaaS</p>
+                  <p className="text-muted-foreground pb-4">
                     "AVR was honored with the FiNext Award in Dubai for innovation in technology and SaaS. 
                     A proud moment that reflects our dedication to building tools that matter."
                   </p>
@@ -198,7 +199,7 @@ const Happenings = () => {
                   <Button 
                     variant="outline"
                     className="border-2 border-primary hover:bg-primary hover:text-primary-foreground w-25"
-                    onClick={() => window.open('https://finext.co', '_blank')}
+                    onClick={() => window.open('https://finextcon.com/aravindh-ravichandran-receives-excellence-in-finance-startups-award-at-finext-conference-2024/', '_blank')}
                   >
                     Learn More
                   </Button>

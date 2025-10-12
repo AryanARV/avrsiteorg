@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Youtube, Instagram, Target, Award } from "lucide-react";
 
+import V1 from "@/assets/archery/5.png";
+import V2 from "@/assets/archery/6.png";
+
 const Archery = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#fdf4ee]">
@@ -15,7 +18,7 @@ const Archery = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12">
         {/* Hero Section */}
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-6">
@@ -75,21 +78,44 @@ const Archery = () => {
                   <h3 className="text-2xl font-bold text-[#55185d]">Recent Videos</h3>
                 </div>
                 <div className="grid md:grid-cols-2 gap-6">
-                  {[1, 2].map((i) => (
-                    <Card key={i} className="bg-white border-[#55185d]/20 hover:scale-105 transition-all duration-300">
+                    {[
+                    {
+                      id: 1,
+                      title: "Day 1 to Day 3 of My Olympic Dream | The First Step on the Archery Field!",
+                      description: "Latest archery training and competition footage",
+                      thumbnail: V1,
+                      url: "https://www.youtube.com/watch?v=25bK790z5Wc"
+                    },
+                    {
+                      id: 2,
+                      title: "Day 1 to Day 3 of My Olympic Dream | The First Step on the Archery Field!",
+                      description: "Highlights from recent tournaments and events",
+                      thumbnail: V2,
+                      url: "https://www.youtube.com/watch?v=rspoGRHidLM"
+                    }
+                    ].map((video) => (
+                    <Card key={video.id} className="bg-white border-[#55185d]/20 hover:scale-105 transition-all duration-300">
                       <CardContent className="p-6">
-                        <div className="aspect-video bg-gradient-to-br from-[#55185d]/10 to-[#55185d]/5 rounded-lg flex items-center justify-center mb-4">
-                          <Youtube className="h-16 w-16 text-[#55185d]/40" />
-                        </div>
-                        <p className="text-center text-foreground/70">Latest archery training and competition footage</p>
+                        <a onClick={() => window.open(video.url, "_blank")}>
+
+                        
+                      <div
+                        className="aspect-video bg-gradient-to-br from-[#55185d]/10 to-[#55185d]/5 rounded-lg flex items-center justify-center mb-4 cursor-pointer"
+                        
+                      >
+                        <img src={video.thumbnail} alt={video.title} className="h-full w-full object-cover rounded-lg" />
+                      </div>
+                      <h4 className="text-lg font-bold text-[#55185d] text-center mb-2">{video.title}</h4>
+                      </a>
+                      {/* <p className="text-center text-foreground/70">{video.description}</p> */}
                       </CardContent>
                     </Card>
-                  ))}
+                    ))}
                 </div>
                 <div className="text-center mt-6">
                   <Button 
                     className="bg-[#55185d] text-white hover:bg-[#55185d]/90 hover:scale-105 transition-all duration-300"
-                    onClick={() => window.open('https://youtube.com/@aravindh', '_blank')}
+                    onClick={() => window.open('https://youtube.com/@arvd', '_blank')}
                   >
                     <Youtube className="h-5 w-5 mr-2" />
                     Subscribe on YouTube

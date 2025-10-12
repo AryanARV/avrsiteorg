@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mic, Users, Award, Globe } from "lucide-react";
 import { useState } from "react";
+import AVRSpeaking from "@/assets/AVR_speaking.png";
 
 const Events = () => {
   const [formData, setFormData] = useState({
@@ -35,17 +36,26 @@ const Events = () => {
       
       <main className="flex-1 pt-24">
         {/* Hero Section */}
-        <section className="py-20 md:py-32">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
+        <section className="py-20">
+            <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center  text-center md:text-left space-y-8 md:space-y-0 md:space-x-12 animate-fade-in">
+              <div className="flex-1">
               <h1 className="text-4xl md:text-6xl font-bold text-[#55185d] leading-tight">
                 Hire Aravindh Ravichandran for Your Event
               </h1>
-              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-3xl mx-auto md:mx-0 mt-6">
                 With proven impact in entrepreneurship, SaaS, and viral media, I deliver events that drive results, inspire teams, and elevate brands.
               </p>
+              </div>
+              <div className="flex-1 flex justify-center md:justify-end mt-8 md:mt-0">
+              <img
+                src={AVRSpeaking}
+                alt="Aravindh Ravichandran speaking at an event"
+                className="rounded-xl shadow-lg w-80 object-cover"
+              />
+              </div>
             </div>
-          </div>
+            </div>
         </section>
 
         {/* Services Section */}
