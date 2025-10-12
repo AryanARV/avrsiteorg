@@ -183,21 +183,26 @@ const Happenings = () => {
 
               {/* FiNext Award */}
               <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 hover:shadow-2xl transition-all duration-300 max-w-3xl mx-auto">
-                <CardContent className="p-8 text-center space-y-4">
+                <CardContent className="p-8 text-center space-y-4 flex flex-row">
+                  <div>
                   <img src={AwardImg} alt="Awarm Image"/>
+                  </div>
+                  <div className="flex flex-col justify-center items-center">
                   <h3 className="text-2xl font-bold text-primary">FiNext Award Dubai</h3>
                   <p className="text-lg font-semibold text-foreground">Innovation in Technology and SaaS</p>
                   <p className="text-muted-foreground">
                     "AVR was honored with the FiNext Award in Dubai for innovation in technology and SaaS. 
                     A proud moment that reflects our dedication to building tools that matter."
                   </p>
+
                   <Button 
                     variant="outline"
-                    className="border-2 border-primary hover:bg-primary hover:text-primary-foreground"
+                    className="border-2 border-primary hover:bg-primary hover:text-primary-foreground w-25"
                     onClick={() => window.open('https://finext.co', '_blank')}
                   >
                     Learn More
                   </Button>
+                  </div>
                 </CardContent>
               </Card>
             </div>

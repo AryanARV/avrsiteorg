@@ -352,31 +352,7 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Core Values */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
-                Core Values & Mission
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {[
-                  "Empowering Founders",
-                  "Building Automated Futures",
-                  "Storytelling with Impact",
-                  "Championing Sport, Technology, and Social Good"
-                ].map((value, index) => (
-                  <div 
-                    key={index}
-                    className="p-6 bg-card border border-border/50 rounded-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
-                  >
-                    <h3 className="text-xl font-bold text-primary">{value}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+  
 
       </main>
       
