@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { TrendingUp, Compass, Zap, Mountain } from "lucide-react";
+import Favicon from "@/assets/chronicles-icon.png"
 
 const ChroniclesOfEchelon = () => {
   return (
@@ -14,7 +15,7 @@ const ChroniclesOfEchelon = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-4">
         {/* Hero Section */}
         <section className="py-20 md:py-32">
           <div className="container mx-auto px-6">
@@ -22,8 +23,8 @@ const ChroniclesOfEchelon = () => {
               {/* Logo/Icon */}
               <div className="relative group mb-8">
                 <div className="absolute inset-0 bg-[#55185d]/20 rounded-full blur-3xl animate-pulse-glow"></div>
-                <div className="relative bg-white rounded-full p-8 inline-block shadow-2xl">
-                  <Mountain className="h-24 w-24 text-[#55185d]" />
+                <div className="relative bg-white rounded-full p-4 inline-block shadow-2xl">
+                  <img src={Favicon} alt="Icon" className="h-20 w-auto"/>
                 </div>
               </div>
               
