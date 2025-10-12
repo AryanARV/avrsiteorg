@@ -70,9 +70,9 @@ const Home = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-20 md:py-32">
+        <section className="py-12 md:py-32">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
@@ -120,7 +120,7 @@ const Home = () => {
         </section>
 
         {/* Impact Metrics */}
-        <section className="py-16 border-y border-border/50 bg-card/30">
+        <section className="py-12 border-y border-border/50 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
@@ -143,7 +143,7 @@ const Home = () => {
         </section>
 
         {/* Podcast Shows */}
-        <section className="py-20 md:py-32">
+        <section className="py-20">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
               Discover My Podcast Shows
@@ -200,7 +200,7 @@ const Home = () => {
         </section>
 
         {/* Venture Spotlight */}
-        <section className="py-20 md:py-32 bg-card/30">
+        <section className="py-20 bg-card/30">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
               My Ventures
@@ -254,7 +254,7 @@ const Home = () => {
         </section>
 
         {/* Book Me for Your Event */}
-        <section className="py-20 md:py-32 bg-[#fdf4ee]">
+        <section className="py-20 bg-[#fdf4ee]">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h2 className="text-3xl md:text-5xl font-bold text-[#55185d] mb-6">
@@ -286,7 +286,7 @@ const Home = () => {
         </section>
 
         {/* Happenings Preview */}
-        <section className="py-20 md:py-32">
+        <section className="py-20">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-16">
               Latest Happenings
@@ -326,7 +326,7 @@ const Home = () => {
 
 
           {/* Social Links */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-20 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
