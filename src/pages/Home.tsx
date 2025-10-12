@@ -7,6 +7,9 @@ import { Users, Mic, Building2, Award } from "lucide-react";
 import portraitImage from "@/assets/AVR_3.png";
 import rookLogo from "@/assets/rook-logo.png";
 import realmLogo from "@/assets/realm-logo.png";
+import podcastThumb1 from "@/assets/podcast-thumb-1.png";
+import podcastThumb2 from "@/assets/podcast-thumb-2.png";
+import podcastThumb3 from "@/assets/podcast-thumb-3.png";
 
 const Home = () => {
   return (
@@ -116,17 +119,20 @@ const Home = () => {
                 {
                   title: "Startup Stories: Realm by Rook",
                   description: "Transformative journeys and lessons from the world of founders, innovators, and scaling startups.",
-                  link: "https://realmrook.com/podcasts"
+                  link: "https://realmrook.com/podcasts",
+                  thumbnail: podcastThumb1
                 },
                 {
                   title: "Sports29 by AVR",
                   description: "Untold athlete origins, grit, and victory. Where sport meets story.",
-                  link: "https://sports29.aravindh.org"
+                  link: "https://sports29.aravindh.org",
+                  thumbnail: podcastThumb2
                 },
                 {
                   title: "AVR x Amrish",
                   description: "Unfiltered conversations on entrepreneurship, mindset, and global perspectives.",
-                  link: "https://instagram.com/arav.vr"
+                  link: "https://instagram.com/arav.vr",
+                  thumbnail: podcastThumb3
                 },
               ].map((show, index) => (
                 <Card 
@@ -135,9 +141,13 @@ const Home = () => {
                   style={{ animationDelay: `${index * 0.15}s` }}
                 >
                   <CardContent className="p-8 space-y-4">
-                    {/* Thumbnail Placeholder */}
-                    <div className="w-full h-48 bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center mb-4">
-                      <Mic className="h-16 w-16 text-primary/40" />
+                    {/* Podcast Thumbnail */}
+                    <div className="w-full aspect-square rounded-lg overflow-hidden mb-4">
+                      <img 
+                        src={show.thumbnail} 
+                        alt={`${show.title} podcast cover`}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h3 className="text-xl font-bold text-primary">{show.title}</h3>
                     <p className="text-muted-foreground leading-relaxed">{show.description}</p>
@@ -201,7 +211,7 @@ const Home = () => {
                     className="w-full hover:bg-primary hover:text-primary-foreground transition-colors border-2 border-primary"
                     onClick={() => window.open('https://realmrook.com', '_blank')}
                   >
-                    Visit Realm
+                    Visit Realm by Rook
                   </Button>
                 </CardContent>
               </Card>

@@ -165,7 +165,7 @@ const Venture = () => {
                   className="px-8 py-6 text-base hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-xl"
                   onClick={() => window.open('https://realmrook.com', '_blank')}
                 >
-                  Visit Realm
+                  Visit Realm by Rook
                 </Button>
               </div>
             </div>
