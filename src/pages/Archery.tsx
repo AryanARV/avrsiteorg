@@ -8,6 +8,10 @@ import { Youtube, Instagram, Target, Award } from "lucide-react";
 import V1 from "@/assets/archery/5.png";
 import V2 from "@/assets/archery/6.png";
 
+import Reel1 from "@/assets/archery/1.png";
+import Reel2 from "@/assets/archery/2.png";
+import Reel3 from "@/assets/archery/3.png";
+
 const Archery = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#fdf4ee]">
@@ -20,7 +24,7 @@ const Archery = () => {
       
       <main className="flex-1 pt-12">
         {/* Hero Section */}
-        <section className="py-20 md:py-32">
+        <section className="pt-20 pb-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in">
               <Target className="h-20 w-20 text-[#55185d] mx-auto mb-4" />
@@ -38,7 +42,7 @@ const Archery = () => {
         </section>
 
         {/* Philosophy Section */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-12">
@@ -64,7 +68,7 @@ const Archery = () => {
         </section>
 
         {/* Content Section */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-12">
@@ -129,17 +133,33 @@ const Archery = () => {
                   <Instagram className="h-8 w-8 text-[#55185d]" />
                   <h3 className="text-2xl font-bold text-[#55185d]">Recent Posts</h3>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
-                  {[1, 2, 3].map((i) => (
-                    <Card key={i} className="bg-white border-[#55185d]/20 hover:scale-105 transition-all duration-300">
-                      <CardContent className="p-0">
-                        <div className="aspect-square bg-gradient-to-br from-[#55185d]/10 to-[#55185d]/5 rounded-lg flex items-center justify-center">
-                          <Instagram className="h-12 w-12 text-[#55185d]/40" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+               <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center">
+                {[
+                  { id: 1, url: "https://www.instagram.com/reel/DL7r8D5z2ye/", thumb: Reel1 },
+                  { id: 2, url: "https://www.instagram.com/reel/DO-_0WeE7OQ/", thumb: Reel3 },
+                  { id: 3, url: "https://www.instagram.com/p/DCElXR2zHzP/", thumb: Reel2 },
+                ].map((item) => (
+                  <a
+                    key={item.id}
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <div className="relative mb-4 w-60 aspect-[9/16] rounded-lg overflow-hidden border hover:scale-105 transition-all duration-300">
+                      <img
+                        src={item.thumb}
+                        alt={`Instagram Reel ${item.id}`}
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Optional Instagram icon overlay */}
+                      <div className="absolute top-2 right-2 bg-white/70 rounded-full p-1">
+                        <Instagram className="h-6 w-6 text-[#55185d]" />
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
                 <div className="text-center mt-6">
                   <Button 
                     className="bg-[#55185d] text-white hover:bg-[#55185d]/90 hover:scale-105 transition-all duration-300"

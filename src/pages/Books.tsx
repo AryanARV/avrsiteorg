@@ -15,9 +15,9 @@ const Books = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-16">
         {/* Hero Section */}
-        <section className="py-20 md:py-32">
+        <section className="pt-20 pb-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
               <BookOpen className="h-20 w-20 text-[#55185d] mx-auto mb-4" />
@@ -32,7 +32,7 @@ const Books = () => {
         </section>
 
         {/* Book Description */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto">
               <Card className="bg-white border-[#55185d]/20">
@@ -57,7 +57,7 @@ const Books = () => {
         </section>
 
         {/* Request Review Copy */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto text-center space-y-8">
               <h2 className="text-3xl md:text-4xl font-bold text-[#55185d]">
@@ -87,7 +87,7 @@ const Books = () => {
         </section>
 
         {/* Sign Up for Updates */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto text-center space-y-6">
               <h2 className="text-2xl md:text-3xl font-bold text-[#55185d]">

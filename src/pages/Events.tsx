@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mic, Users, Award, Globe } from "lucide-react";
 import { useState } from "react";
-import AVRSpeaking from "@/assets/AVR_speaking.png";
+import AVRSpeaking from "@/assets/book_avr.jpg";
 
 const Events = () => {
   const [formData, setFormData] = useState({
@@ -34,9 +34,9 @@ const Events = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-12">
         {/* Hero Section */}
-        <section className="py-20">
+        <section className="py-12">
             <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center  text-center md:text-left space-y-8 md:space-y-0 md:space-x-12 animate-fade-in">
               <div className="flex-1">
@@ -59,7 +59,7 @@ const Events = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-12">
               What I Offer
@@ -84,7 +84,7 @@ const Events = () => {
         </section>
 
         {/* Topics Section */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-8">
@@ -113,7 +113,7 @@ const Events = () => {
         </section>
 
         {/* Booking Form */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <div className="max-w-2xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-8">

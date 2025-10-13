@@ -17,7 +17,7 @@ const ChroniclesOfEchelon = () => {
       
       <main className="flex-1 pt-4">
         {/* Hero Section */}
-        <section className="py-20 md:py-32">
+        <section className="pt-24 pb-12">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
               {/* Logo/Icon */}
@@ -40,7 +40,7 @@ const ChroniclesOfEchelon = () => {
         </section>
 
         {/* Pillars Section */}
-        <section className="py-16 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-12">
               Core Pillars
@@ -69,7 +69,7 @@ const ChroniclesOfEchelon = () => {
         </section>
 
         {/* Milestones Timeline */}
-        <section className="py-16">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-4xl font-bold text-[#55185d] text-center mb-12">
               Key Milestones
@@ -102,7 +102,7 @@ const ChroniclesOfEchelon = () => {
         </section>
 
         {/* Closing Message */}
-        <section className="py-20 bg-white/50">
+        <section className="py-12 bg-white/50">
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <p className="text-2xl md:text-3xl font-bold text-[#55185d] italic">

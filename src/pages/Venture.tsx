@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Rocket, Target, Zap, Shield, Users, TrendingUp } from "lucide-react";
+import { Rocket, Target, Zap, Shield, Users, TrendingUp, User, Award, Lightbulb, Handshake } from "lucide-react";
 import rookLogo from "@/assets/rook-logo.png";
 import realmLogo from "@/assets/realm-logo.png";
 
@@ -33,7 +33,7 @@ const Venture = () => {
       />
       <Navigation />
       
-      <main className="flex-1 pt-24">
+      <main className="flex-1 pt-16">
         {/* Page Header */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-6">
@@ -47,7 +47,7 @@ const Venture = () => {
         </section>
 
         {/* Rook Section */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -57,29 +57,29 @@ const Venture = () => {
                   className="h-20 w-auto mx-auto mb-6"
                 />
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
-                  Rook: Frictionless Growth Through Automation
+                  Simple Tools. Monumental Impact.
                 </h2>
                 <p className="text-lg md:text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
-                  Rook is the powerhouse SaaS platform enabling startups, agencies, and enterprises to automate operations, scale fast, and unlock new markets.
+                  We craft focused SaaS products that empower creators, freelancers, and founders to get more done with less.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {[
                   {
-                    icon: Rocket,
-                    title: "Cloud-native, no-code interfaces",
-                    description: "Build and deploy without technical complexity"
+                    icon: User,
+                    title: "People First",
+                    description: "We put people first building products with empathy and care."
                   },
                   {
-                    icon: Target,
-                    title: "Performance-focused tools",
-                    description: "Optimized for legal, media, and sales ops"
+                    icon: Award,
+                    title: "Excellence",
+                    description: "We take pride in our craft, striving for excellence in every detail."
                   },
                   {
                     icon: Zap,
-                    title: "Visionary leadership",
-                    description: "Backed by real founder experience"
+                    title: "Sustainability",
+                    description: "We build for lasting impact on people and the planet."
                   }
                 ].map((feature, index) => (
                   <Card 
@@ -110,7 +110,7 @@ const Venture = () => {
         </section>
 
         {/* Realm by Rook Section */}
-        <section className="py-16 md:py-24">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
@@ -120,29 +120,29 @@ const Venture = () => {
                   className="h-20 w-auto mx-auto mb-6"
                 />
                 <h2 className="text-3xl md:text-5xl font-bold text-primary mb-6">
-                  Realm by Rook: Custom Growth for Your Industry
+                  We create realms of impact.
                 </h2>
                 <p className="text-lg md:text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
-                  Realm brings Rook's tech to vertical solutions (legal, media, marketing), with case studies showing how businesses save time, drive sales, and stay ahead.
+                  At Realm by Rook, we blend creativity and technology to build experiences that inspire action.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 {[
                   {
-                    icon: Shield,
-                    title: "Powerful integrations",
-                    description: "Seamlessly connect with your existing tools and workflows"
+                    icon: Target,
+                    title: "Driven by Results",
+                    description: "We deliver measurable growth and real impact."
                   },
                   {
-                    icon: Users,
-                    title: "Proven client successes",
-                    description: "Real results from satisfied businesses across industries"
+                    icon: Lightbulb,
+                    title: "Innovation in Action",
+                    description: "We turn ideas into powerful solutions."
                   },
                   {
-                    icon: TrendingUp,
-                    title: "Secure & scalable",
-                    description: "Always up-to-date, enterprise-grade security"
+                    icon: Handshake,
+                    title: "Partnership that Matters",
+                    description: "We build trust and long term value."
                   }
                 ].map((feature, index) => (
                   <Card 
@@ -173,28 +173,28 @@ const Venture = () => {
         </section>
 
         {/* Future Vision Section */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center space-y-8">
               <h2 className="text-3xl md:text-5xl font-bold text-primary">
                 Future Vision & Growth
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-                Constant innovation: AI-driven features, new vertical launches, and the promise to deliver results faster and simpler.
+                Driving innovation through smart technology, scalable solutions, and a commitment to deliver value faster and better.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 pt-8">
                 <div className="space-y-2">
-                  <p className="text-lg font-semibold text-primary">Community-driven roadmap</p>
-                  <p className="text-muted-foreground">Built with feedback from real users</p>
+                  <p className="text-lg font-semibold text-primary">Innovation at Core</p>
+                  <p className="text-muted-foreground">Constantly refining our products and services to stay ahead.</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-lg font-semibold text-primary">24/7 support</p>
-                  <p className="text-muted-foreground">Always here when you need us</p>
+                  <p className="text-lg font-semibold text-primary">Customer-First Approach</p>
+                  <p className="text-muted-foreground">Guided by real feedback to deliver meaningful results.</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-lg font-semibold text-primary">Designed for founders</p>
-                  <p className="text-muted-foreground">By founders who understand your journey</p>
+                  <p className="text-lg font-semibold text-primary">Built for Professionals</p>
+                  <p className="text-muted-foreground">Crafted by experts who understand what businesses truly need.</p>
                 </div>
               </div>
             </div>
@@ -202,7 +202,7 @@ const Venture = () => {
         </section>
 
         {/* Testimonials Preview */}
-        <section className="py-16 md:py-24">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <h2 className="text-3xl md:text-5xl font-bold text-primary text-center mb-12">
               What Our Clients Say
@@ -210,14 +210,14 @@ const Venture = () => {
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {[
                 {
-                  quote: "Rook transformed our operations completely. We've saved countless hours and scaled faster than we ever imagined.",
-                  author: "Sarah Chen",
-                  role: "Founder, Legal Tech Startup"
+                  quote: "Working with this team was a seamless experience. They understood our vision and delivered a sleek, high-converting landing page that perfectly represents our brand. The custom SaaS tool they built has significantly improved our internal processes and made student onboarding much easier. Highly professional, responsive, and results-driven!",
+                  author: "Ashwin",
+                  role: "Founder, ICM"
                 },
                 {
-                  quote: "Realm by Rook gave us the custom solution we needed. The results speak for themselves - 3x revenue growth in 6 months.",
-                  author: "Michael Rodriguez",
-                  role: "CEO, Media Agency"
+                  quote: "We wanted a clean, modern Shopify store to showcase our products, and they delivered exactly what we needed. The website is fast, visually appealing, and user-friendly. Their team was supportive throughout the project and quick to address our feedback. Thanks for making our online store a success!",
+                  author: "Gowri Shankar",
+                  role: "CEO, ZGuard"
                 }
               ].map((testimonial, index) => (
                 <Card 

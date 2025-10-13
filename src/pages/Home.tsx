@@ -12,6 +12,7 @@ import podcastThumb2 from "@/assets/podcast-thumb-2.png";
 import podcastThumb3 from "@/assets/podcast-thumb-3.png";
 import { Instagram, Twitter, Youtube, Linkedin } from "lucide-react";
 
+import Avr from "@/assets/AVR_speaking.png";
 const Home = () => {
    const socialLinks = [
     {
@@ -72,9 +73,9 @@ const Home = () => {
       
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-12 md:py-32">
+        <section className="py-20 md:py-32">
           <div className="container mx-auto px-6">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center order-last md:order-first">
               {/* Left: Content */}
               <div className="space-y-8 animate-fade-in">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
@@ -101,7 +102,7 @@ const Home = () => {
               </div>
 
               {/* Right: Portrait with VFX */}
-              <div className="relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="relative animate-fade-in pt-8 md:pt-0 order-first md:order-last" style={{ animationDelay: '0.2s' }}>
                 <div className="relative group">
                   {/* VFX Background Glow */}
                   <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse-glow group-hover:scale-110 transition-transform duration-500"></div>
@@ -255,23 +256,25 @@ const Home = () => {
 
         {/* Book Me for Your Event */}
         <section className="py-20 bg-[#fdf4ee]">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl mx-auto text-center space-y-8">
+            <div className="container mx-auto px-6">
+            <div className="max-w-4xl mx-auto grid md:grid-cols-2  items-center text-center md:text-left">
+              {/* Left: Content */}
+              <div className="space-y-8">
               <h2 className="text-3xl md:text-5xl font-bold text-[#55185d] mb-6">
                 Book Aravindh Ravichandran for Your Event
               </h2>
               <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
                 Inspirational startup mentor, podcast host, and SaaS entrepreneur. Available for keynote talks, panel moderation, fireside chats, and growth workshops.
               </p>
-              <div className="grid md:grid-cols-3 gap-6 my-12 text-left">
+              <div className="grid md:grid-cols-1 gap-6 my-12 text-left">
                 <div className="space-y-2">
-                  <div className="text-[#55185d] font-semibold">✓ Keynotes on startup growth, SaaS scaling, and content virality</div>
+                <div className="text-[#55185d] font-semibold">✓ Keynotes on startup growth, SaaS scaling, and content virality</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-[#55185d] font-semibold">✓ Podcast-style storytelling for events</div>
+                <div className="text-[#55185d] font-semibold">✓ Podcast-style storytelling for events</div>
                 </div>
                 <div className="space-y-2">
-                  <div className="text-[#55185d] font-semibold">✓ Workshops for founders, teams, and creators</div>
+                <div className="text-[#55185d] font-semibold">✓ Workshops for founders, teams, and creators</div>
                 </div>
               </div>
               <Button 
@@ -281,8 +284,17 @@ const Home = () => {
               >
                 View Full Profile & Book an Event
               </Button>
+              </div>
+              {/* Right: Image */}
+              <div className="flex justify-center md:justify-end pt-12 md:pt-0">
+              <img 
+                src={Avr} 
+                alt="Aravindh Ravichandran speaking at an event" 
+                className="rounded-2xl w-full max-w-xs shadow-xl"
+              />
+              </div>
             </div>
-          </div>
+            </div>
         </section>
 
         {/* Happenings Preview */}
@@ -332,7 +344,7 @@ const Home = () => {
               <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
                 Connect With Me
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}

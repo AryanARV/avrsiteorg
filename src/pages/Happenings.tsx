@@ -23,7 +23,7 @@ const Happenings = () => {
       
       <main className="flex-1 pt-24">
         {/* Page Header */}
-        <section className="py-16 md:py-24">
+        <section className="pt-20 pb-12">
           <div className="container mx-auto px-6">
             <h1 className="text-4xl md:text-6xl font-bold text-primary text-center mb-6 animate-fade-in">
               Happenings
@@ -35,7 +35,7 @@ const Happenings = () => {
         </section>
 
         {/* Latest Podcast Releases */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-center gap-3 mb-12">
@@ -126,7 +126,7 @@ const Happenings = () => {
         </section>
 
         {/* Featured Media & Press */}
-        <section className="py-16 md:py-24">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-center gap-3 mb-12">
@@ -184,7 +184,7 @@ const Happenings = () => {
 
               {/* FiNext Award */}
               <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 hover:shadow-2xl transition-all duration-300 max-w-3xl mx-auto">
-                <CardContent className="p-8 text-center space-y-4 flex flex-row">
+                <CardContent className="p-8 text-center space-y-4 flex flex-col md:flex-row">
                   <div>
                   <img src={AwardImg} alt="Awarm Image"/>
                   </div>
@@ -211,7 +211,7 @@ const Happenings = () => {
         </section>
 
         {/* Upcoming Events & Speaking */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-center gap-3 mb-12">
@@ -266,7 +266,7 @@ const Happenings = () => {
         </section>
 
         {/* Social Impact */}
-        <section className="py-16 md:py-24">
+        <section className="py-12">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-center gap-3 mb-12">
@@ -323,7 +323,7 @@ const Happenings = () => {
         </section>
 
         {/* Product Updates */}
-        <section className="py-16 md:py-24 bg-card/30">
+        <section className="py-12 bg-card/30">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="flex items-center justify-center gap-3 mb-12">
