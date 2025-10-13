@@ -19,6 +19,8 @@ import Books from "./pages/Books";
 import ChroniclesOfEchelon from "./pages/ChroniclesOfEchelon";
 import NotFound from "./pages/NotFound";
 
+import ScrollToTop from "@/components/ScrollToTop";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -27,6 +29,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/index" element={<Index />} />
