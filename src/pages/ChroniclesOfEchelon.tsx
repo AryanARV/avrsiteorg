@@ -79,7 +79,7 @@ const ChroniclesOfEchelon = () => {
                 { year: "2024", title: "Entrepreneurial Evolution", desc: "Scaling ventures and expanding impact globally" },
                 { year: "2023", title: "Media Mastery", desc: "Launching multiple successful podcast platforms" },
                 { year: "2022", title: "Foundation Building", desc: "Establishing core business infrastructure and vision" },
-                { year: "2021", title: "The Beginning", desc: "Committing to the journey of continuous improvement" }
+                { year: "2020", title: "The Beginning", desc: "Committing to the journey of continuous improvement" }
               ].map((milestone, index) => (
                 <Card 
                   key={index} 
@@ -106,7 +106,7 @@ const ChroniclesOfEchelon = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <p className="text-2xl md:text-3xl font-bold text-[#55185d] italic">
-                "Explore, Learn, Evolve—Welcome to the Chronicles."
+                "Explore, Learn, Evolve - Welcome to the Chronicles."
               </p>
               <div className="h-1 w-32 bg-[#55185d] mx-auto rounded-full"></div>
             </div>

@@ -179,78 +179,92 @@ const Podcasts = () => {
                 </div>
 
                 {/* Horizontally Scrolling Episode Tiles */}
-                <div className="relative mb-6">
-                  <div className="overflow-x-auto pb-4 hide-scrollbar">
-                    <div className="flex gap-6 min-w-max">
-                      {/* Placeholder Episode Tiles */}
-                      {series.episodes.length > 0 ? (
-                        series.episodes.map((episode) => (
-                          <div
-                          key={episode.id}
-                          className="bg-card border border-border/50 rounded-lg p-6 w-64 md:w-80 hover:scale-105 hover:shadow-xl transition-all duration-300"
+           <div className="relative mb-6">
+            <div
+              className="overflow-x-auto pb-4 hide-scrollbar"
+              id={`episodeSlider-${series.id}`}
+            >
+              <div className="flex gap-6 min-w-max">
+                {series.episodes.length > 0 ? (
+                  series.episodes.map((episode) => (
+                    <div
+                      key={episode.id}
+                      className="bg-card border border-border/50 rounded-lg p-6 w-64 md:w-80 hover:scale-105 hover:shadow-xl transition-all duration-300"
+                    >
+                      {/* Episode Cover */}
+                      <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                        {episode.cover ? (
+                          <img
+                            src={episode.cover}
+                            alt={episode.title}
+                            className="object-cover w-full h-full rounded-lg"
+                          />
+                        ) : (
+                          <span className="text-primary/50 font-bold text-2xl">EP {episode.id}</span>
+                        )}
+                      </div>
+
+                      {/* Episode Info */}
+                      <h3 className="font-bold text-primary mb-2 line-clamp-3">
+                        {episode.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                        {episode.description}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-muted-foreground">
+                        <span>Episode {episode.id}</span>
+                      </div>
+                      <div className="flex flex-row gap-1.5 justify-center items-center mt-2">
+                        <a
+                          href={episode.spotifyUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
                         >
-                          {/* Episode Cover */}
-                          <div className="w-full aspect-square bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
-                            {episode.cover ? (
-                              <img
-                                src={episode.cover}
-                                alt={episode.title}
-                                className="object-cover w-full h-full rounded-lg"
-                              />
-                            ) : (
-                              <span className="text-primary/50 font-bold text-2xl">EP {episode.id}</span>
-                            )}
-                          </div>
-
-                          {/* Episode Info */}
-                          <h3 className="font-bold text-primary mb-2 line-clamp-3">
-                            {episode.title}
-                          </h3>
-                          <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
-                            {episode.description}
-                          </p>
-                          <div className="flex items-center justify-between text-xs text-muted-foreground">
-                            <span>Episode {episode.id}</span>
-                          </div>
-                          <div className="flex flex-row gap-1.5 justify-center items-center mt-2">
-                            <a
-                              href={episode.spotifyUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
-                              aria-label={`Listen to ${episode.title} on Spotify`}
-                            >
-                              <img
-                                src={Spotify}
-                                alt="Listen on Spotify"
-                                className="h-[52px] w-auto"
-                              />
-                            </a>
-                            <a
-                              href={episode.amazonUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
-                              aria-label={`Listen to ${episode.title} on Amazon Music`}
-                            >
-                              <img
-                                src={Amazon}
-                                alt="Listen on Amazon Music"
-                                className="h-10 w-auto"
-                              />
-                            </a>
-                          </div>
-                        </div>
-
-                        ))
-                      ) : (
-                        <div className="text-muted-foreground italic py-8 px-4">
-                          Episodes coming soon.
-                        </div>
-                      )}
+                          <img src={Spotify} alt="Listen on Spotify" className="h-[52px] w-auto" />
+                        </a>
+                        <a
+                          href={episode.amazonUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
+                        >
+                          <img src={Amazon} alt="Listen on Amazon Music" className="h-10 w-auto" />
+                        </a>
+                      </div>
                     </div>
+                  ))
+                ) : (
+                  <div className="text-muted-foreground italic py-8 px-4">
+                    Episodes coming soon.
                   </div>
-                </div>
+                )}
+              </div>
+            </div>
+
+            {/* Scroll Buttons */}
+            <div className="flex justify-center gap-3 mt-4">
+              <button
+                onClick={() => {
+                  const slider = document.getElementById(`episodeSlider-${series.id}`);
+                  slider.scrollBy({ left: -300, behavior: "smooth" });
+                }}
+                className="bg-primary text-white text-xs px-3 py-1.5 rounded-full hover:bg-primary/90 shadow-sm transition-all duration-300"
+              >
+                ◀
+              </button>
+
+              <button
+                onClick={() => {
+                  const slider = document.getElementById(`episodeSlider-${series.id}`);
+                  slider.scrollBy({ left: 300, behavior: "smooth" });
+                }}
+                className="bg-primary text-white text-xs px-3 py-1.5 rounded-full hover:bg-primary/90 shadow-sm transition-all duration-300"
+              >
+                ▶
+              </button>
+            </div>
+          </div>
 
                 {/* All Episodes Button */}
                 <div className="text-center">
