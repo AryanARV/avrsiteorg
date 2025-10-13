@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Youtube, Instagram, Target, Award } from "lucide-react";
+import { Youtube, Instagram, Target, Award, Star, Edit3, Medal} from "lucide-react";
 
 import V1 from "@/assets/archery/5.png";
 import V2 from "@/assets/archery/6.png";
@@ -50,9 +50,9 @@ const Archery = () => {
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {[
-                  { icon: Target, title: "Precision", desc: "Every arrow is a lesson in focus and control" },
-                  { icon: Award, title: "Perseverance", desc: "Consistent practice builds championship mindset" },
-                  { icon: Target, title: "Excellence", desc: "Pursuit of mastery in every shot" }
+                  { icon: Edit3, title: "Precision", desc: "Every arrow is a lesson in focus and control" },
+                  { icon: Star, title: "Perseverance", desc: "Consistent practice builds championship mindset" },
+                  { icon: Medal, title: "Excellence", desc: "Pursuit of mastery in every shot" }
                 ].map((item, index) => (
                   <Card key={index} className="hover:scale-105 transition-all duration-300 bg-white border-[#55185d]/20">
                     <CardContent className="p-6 text-center space-y-4">
@@ -85,7 +85,7 @@ const Archery = () => {
                     {[
                     {
                       id: 1,
-                      title: "Day 1 to Day 3 of My Olympic Dream | The First Step on the Archery Field!",
+                      title: "Can You Hit 6 Tiny Targets in a Row? | Archery Precision Challenge",
                       description: "Latest archery training and competition footage",
                       thumbnail: V1,
                       url: "https://www.youtube.com/watch?v=25bK790z5Wc"

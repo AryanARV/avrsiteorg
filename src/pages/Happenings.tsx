@@ -51,20 +51,25 @@ const Happenings = () => {
                     show: "Sports29 by AVR",
                     episode: "Episode 14: K Strug",
                     description: "Exploring the mental game of elite athletes",
-                    date: "Jan 2025"
-
+                    date: "Oct 2025",
+                    spotifylink : "#",
+                    amazonlink : "#"
                   },
                   {
                     show: "Startup Stories: Realm by Rook",
-                    episode: "Episode 12: Scaling SaaS",
-                    description: "How to grow your SaaS from 0 to 100K users",
-                    date: "Jan 2025"
+                    episode: "Episode 8: Perplexity Startup Story",
+                    description: "Aravind Srinivas & the Answer Engine Revolution",
+                    date: "Oct 2025",
+                    spotifylink: "https://open.spotify.com/episode/0i1wZqkYsuFx6B2n3cKpLS?si=qZ5d1Y6jTMOwLqcEwdZ7cA",
+                    amazonlink: "https://music.amazon.com/podcasts/68807c68-84aa-426b-82ae-e0e568eedce9/episodes/a95fd7e1-9cf2-43b6-aaca-7a942a140350/startup-stories-aravindh-ravichandran-perplexity-startup-story-aravind-srinivas-the-answer-engine-revolution"
                   },
                   {
                     show: "AVR x Amrish",
                     episode: "Episode 8: Global Markets",
                     description: "Navigating international expansion strategies",
-                    date: "Dec 2024"
+                    date: "Nov 2025",
+                    spotifylink : "#",
+                    amazonlink : "#"
                   }
                 ].map((podcast, index) => (
                   <Card 
@@ -78,7 +83,7 @@ const Happenings = () => {
                       <p className="text-sm text-foreground/60">{podcast.date}</p>
                       <div className="flex flex-row gap-1.5 justify-center items-center">
                         <a 
-                          href="#"
+                          href={podcast.spotifylink}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
@@ -92,7 +97,7 @@ const Happenings = () => {
                         </a>
                         
                         <a 
-                          href="#"
+                          href={podcast.amazonlink}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="transition-all duration-300 hover:scale-105 hover:opacity-80 flex items-center"
@@ -136,7 +141,7 @@ const Happenings = () => {
                 </h2>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+              {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 {[
                   {
                     outlet: "TechCrunch",
@@ -180,7 +185,7 @@ const Happenings = () => {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
+              </div> */}
 
               {/* FiNext Award */}
               <Card className="bg-gradient-to-br from-primary/10 to-accent/10 border-primary/30 hover:shadow-2xl transition-all duration-300 max-w-3xl mx-auto">

@@ -126,7 +126,7 @@ const Home = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {[
                 { icon: Users, label: "100+ founders advised", color: "text-primary" },
-                { icon: Mic, label: "22 successful podcast shows", color: "text-primary" },
+                { icon: Mic, label: "22+ successful podcast shows", color: "text-primary" },
                 { icon: Building2, label: "Founder, CEO of Rook", color: "text-primary" },
                 { icon: Award, label: "Award Winning Entrepreneur", color: "text-primary" },
               ].map((metric, index) => (
