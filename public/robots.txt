@@ -1,4 +1,40 @@
+# robots.txt for aravindh.org
+# Generated: 2025-11-22
+
+# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
 
+# Disallow crawling of admin or private areas (if any exist in future)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Crawl-delay for polite crawling (optional, uncomment if needed)
+# Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://aravindh.org/sitemap.xml
+
+# Common search engine bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block bad bots (optional - uncomment to block specific bots)
+# User-agent: BadBot
+# Disallow: /
+
+# Allow CSS, JS, and images for better SEO
+User-agent: Googlebot
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
